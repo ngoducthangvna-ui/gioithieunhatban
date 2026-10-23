@@ -33,6 +33,9 @@
   --header-h: 5rem;
   --radius: 3px;
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --kintsugi: #c59b27;
+  --matcha: #4a6844;
+  --hanko-red: #c93b2b;
 }
 
 *,
@@ -1841,4 +1844,520 @@ body.lightbox-open { overflow: hidden; }
   .lightbox-hint { display: none; }
   .lightbox-hint--touch { display: block; }
 }
+
+/* ==========================================================================
+   PHONG CÁCH NHẬT BẢN MỞ RỘNG (WAGARA, HANKO, ZEN & LỘ TRÌNH CHUYÊN SÂU)
+   ========================================================================== */
+
+/* ---------- A. Họa tiết truyền thống Wagara & Con dấu Hanko ---------- */
+.wagara-divider {
+  position: relative;
+  width: 100%;
+  height: 28px;
+  margin: clamp(1.5rem, 3vw, 2.5rem) auto;
+  opacity: 0.45;
+  background-repeat: repeat-x;
+  background-position: center;
+  pointer-events: none;
+}
+
+/* Sóng biển Seigaiha (biểu tượng thanh bình) */
+.wagara-seigaiha {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='24' viewBox='0 0 48 24'%3E%3Cpath fill='none' stroke='%23b08d4f' stroke-width='1.2' d='M0 24 A24 24 0 0 1 48 24 M6 24 A18 18 0 0 1 42 24 M12 24 A12 12 0 0 1 36 24 M18 24 A6 6 0 0 1 30 24 M24 24 A24 24 0 0 0 0 0 M24 24 A18 18 0 0 0 6 6 M24 24 A12 12 0 0 0 12 12 M24 24 A6 6 0 0 0 18 18'/%3E%3C/svg%3E");
+}
+
+/* Con dấu triện đỏ truyền thống Hanko / Inkan */
+.hanko {
+  display: inline-grid;
+  place-items: center;
+  border: 2px solid var(--hanko-red);
+  color: var(--hanko-red);
+  font-family: var(--font-jp);
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background: rgba(201, 59, 43, 0.04);
+  box-shadow: 0 0 0 1px rgba(201, 59, 43, 0.15) inset;
+  transition: transform 0.3s var(--ease), background 0.3s var(--ease);
+}
+.hanko--square {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 3px;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+}
+.hanko--circle {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  font-size: 0.92rem;
+}
+.hanko--gold {
+  border-color: var(--kintsugi);
+  color: var(--kintsugi);
+  box-shadow: 0 0 0 1px rgba(197, 155, 39, 0.2) inset;
+  background: rgba(197, 155, 39, 0.05);
+}
+
+/* Dải chữ thư pháp dọc nghệ thuật (Tate-chū-yoko / Vertical Japanese) */
+.vertical-calligraphy {
+  position: absolute;
+  top: 1.5rem;
+  right: clamp(1rem, 3vw, 2.5rem);
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-family: var(--font-jp);
+  font-size: clamp(0.85rem, 1.2vw, 1.05rem);
+  letter-spacing: 0.35em;
+  color: rgba(20, 27, 38, 0.32);
+  user-select: none;
+  pointer-events: none;
+  z-index: 1;
+}
+.section--dark .vertical-calligraphy {
+  color: rgba(248, 244, 236, 0.22);
+}
+
+/* Thủy ấn Kanji nghệ thuật chìm dưới nền */
+.kanji-watermark {
+  position: absolute;
+  right: 5%;
+  top: 10%;
+  font-family: var(--font-jp);
+  font-size: clamp(8rem, 18vw, 16rem);
+  font-weight: 700;
+  line-height: 1;
+  color: rgba(200, 56, 46, 0.035);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+.section--dark .kanji-watermark {
+  color: rgba(248, 244, 236, 0.03);
+}
+
+/* Thơ Haiku Nhật Bản */
+.haiku-banner {
+  margin: clamp(2rem, 3.5vw, 3rem) auto;
+  padding: clamp(1.4rem, 2.5vw, 2rem) clamp(1.5rem, 3vw, 2.5rem);
+  background: linear-gradient(135deg, rgba(255, 253, 248, 0.9) 0%, rgba(241, 235, 223, 0.8) 100%);
+  border: 1px solid var(--washi-border, rgba(176, 141, 79, 0.25));
+  border-left: 3px solid var(--vermilion);
+  border-radius: var(--radius);
+  position: relative;
+  overflow: hidden;
+}
+.haiku-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.haiku-text {
+  flex: 1 1 300px;
+}
+.haiku-verse {
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.5vw, 1.22rem);
+  font-style: italic;
+  color: var(--heading);
+  line-height: 1.7;
+}
+.haiku-jp {
+  font-family: var(--font-jp);
+  font-size: 0.95rem;
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.1em;
+}
+.haiku-author {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* Nút âm thanh Zen trên header */
+.zen-audio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid rgba(248, 244, 236, 0.22);
+  border-radius: 999px;
+  background: rgba(22, 35, 61, 0.4);
+  color: var(--paper);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.3s var(--ease);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+.site-header.is-scrolled .zen-audio-btn {
+  border-color: rgba(20, 27, 38, 0.18);
+  background: rgba(248, 244, 236, 0.65);
+  color: var(--ink);
+}
+.zen-audio-btn:hover {
+  background: var(--vermilion);
+  border-color: var(--vermilion);
+  color: #fff;
+  transform: translateY(-1px);
+}
+.zen-audio-btn.is-active {
+  background: var(--matcha);
+  border-color: var(--matcha);
+  color: #fff;
+  box-shadow: 0 0 12px rgba(74, 104, 68, 0.45);
+}
+.zen-audio-icon {
+  font-size: 0.95rem;
+  display: inline-block;
+  animation: furinSwing 3s ease-in-out infinite alternate;
+  transform-origin: top center;
+}
+@keyframes furinSwing {
+  0% { transform: rotate(-5deg); }
+  100% { transform: rotate(5deg); }
+}
+
+/* ---------- B. Mở rộng Văn hóa & Bộ lọc ---------- */
+.culture-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+.culture-filter-btn {
+  padding: 0.55rem 1.15rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s var(--ease);
+}
+.culture-filter-btn:hover {
+  border-color: var(--vermilion);
+  color: var(--heading);
+}
+.culture-filter-btn.is-active {
+  background: var(--vermilion);
+  border-color: var(--vermilion);
+  color: #fff;
+  box-shadow: 0 4px 12px -2px rgba(200, 56, 46, 0.4);
+}
+.culture-card.is-filtered-out {
+  display: none !important;
+}
+
+/* Huy hiệu thẻ văn hóa */
+.culture-badges {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.85rem;
+}
+.culture-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.culture-badge--global {
+  background: rgba(200, 56, 46, 0.1);
+  color: var(--vermilion);
+  border: 1px solid rgba(200, 56, 46, 0.25);
+}
+.culture-badge--heritage {
+  background: rgba(176, 141, 79, 0.12);
+  color: #8c6a2e;
+  border: 1px solid rgba(176, 141, 79, 0.3);
+}
+.culture-badge--zen {
+  background: rgba(74, 104, 68, 0.1);
+  color: var(--matcha);
+  border: 1px solid rgba(74, 104, 68, 0.25);
+}
+
+.culture-impact {
+  margin-top: 0.75rem;
+  padding-top: 0.7rem;
+  border-top: 1px dashed rgba(20, 27, 38, 0.12);
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+.culture-impact strong {
+  color: var(--heading);
+  font-weight: 600;
+}
+
+/* ---------- C. Hệ thống Lộ trình Du lịch Toàn diện (Itinerary Tabs) ---------- */
+.itinerary-selector {
+  margin-top: 2rem;
+}
+.itinerary-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+.itinerary-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.9rem 1.1rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--text);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.35s var(--ease);
+  position: relative;
+  overflow: hidden;
+}
+.itinerary-tab::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: transparent;
+  transition: background 0.3s var(--ease);
+}
+.itinerary-tab:hover {
+  transform: translateY(-2px);
+  border-color: rgba(200, 56, 46, 0.35);
+  box-shadow: 0 8px 18px -6px rgba(20, 27, 38, 0.12);
+}
+.itinerary-tab.is-active {
+  background: #fff;
+  border-color: var(--vermilion);
+  box-shadow: 0 10px 24px -8px rgba(200, 56, 46, 0.25);
+}
+.itinerary-tab.is-active::before {
+  background: var(--vermilion);
+}
+.itinerary-tab-icon {
+  font-size: 1.25rem;
+  margin-bottom: 0.35rem;
+}
+.itinerary-tab-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--heading);
+  line-height: 1.35;
+}
+.itinerary-tab-meta {
+  margin-top: 0.25rem;
+  font-size: 0.72rem;
+  color: var(--gold);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+/* Panel Lộ trình */
+.itinerary-panel {
+  display: none;
+  animation: fadeInPanel 0.4s var(--ease);
+}
+.itinerary-panel.is-active {
+  display: block;
+}
+@keyframes fadeInPanel {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Thẻ tổng quan lộ trình (Route Overview Card) */
+.route-hero-card {
+  padding: clamp(1.4rem, 2.6vw, 2.2rem);
+  background: linear-gradient(135deg, var(--surface) 0%, rgba(241, 235, 223, 0.5) 100%);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  margin-bottom: 2rem;
+  box-shadow: 0 12px 30px -15px rgba(20, 27, 38, 0.08);
+}
+.route-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+.route-title-wrap h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+  color: var(--heading);
+  font-weight: 600;
+}
+.route-title-wrap p {
+  margin-top: 0.3rem;
+  font-size: 0.94rem;
+  color: var(--muted);
+}
+.route-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.route-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--heading);
+}
+
+/* Thông số lộ trình (Meta grid) */
+.route-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+.route-meta-box {
+  padding: 0.85rem 1rem;
+  background: #fff;
+  border: 1px solid rgba(20, 27, 38, 0.08);
+  border-radius: 2px;
+}
+.route-meta-box dt {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  font-weight: 600;
+}
+.route-meta-box dd {
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--heading);
+}
+
+/* Điểm nhấn lộ trình (Highlights) */
+.route-highlights-box {
+  padding: 1.1rem 1.3rem;
+  background: rgba(200, 56, 46, 0.035);
+  border-left: 3px solid var(--vermilion);
+  border-radius: 2px;
+}
+.route-highlights-box h4 {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--vermilion);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.route-highlights-box ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.4rem 1.2rem;
+  list-style: none;
+}
+.route-highlights-box li {
+  position: relative;
+  padding-left: 1.1rem;
+  font-size: 0.88rem;
+  color: var(--heading);
+}
+.route-highlights-box li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  color: var(--gold);
+  font-size: 0.7rem;
+}
+
+/* Timeline chi tiết các ngày */
+.day-kanji-num {
+  font-family: var(--font-jp);
+  font-size: 0.65rem;
+  color: var(--muted);
+  display: block;
+  margin-top: -0.2rem;
+}
+.day-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+.day-tag {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  font-size: 0.74rem;
+  color: var(--muted);
+}
+.day-extra-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.6rem;
+  margin-top: 0.85rem;
+  padding: 0.75rem 0.95rem;
+  background: rgba(255, 253, 248, 0.75);
+  border: 1px dashed rgba(176, 141, 79, 0.35);
+  border-radius: 2px;
+  font-size: 0.82rem;
+}
+.day-food, .day-tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+}
+.day-extra-icon {
+  flex: none;
+  font-size: 0.95rem;
+}
+
+/* Responsive tinh chỉnh */
+@media (max-width: 768px) {
+  .itinerary-nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .haiku-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .zen-audio-btn span.zen-label {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .itinerary-nav {
+    grid-template-columns: 1fr;
+  }
+}
+
 

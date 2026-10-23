@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nhật Bản — Khám phá xứ sở hoa anh đào</title>
-<meta name="description" content="Trang giới thiệu Nhật Bản: tổng quan đất nước, các vùng miền và điểm đến, văn hóa truyền thống, ẩm thực, bốn mùa, kinh nghiệm du lịch và lịch trình gợi ý 7 ngày.">
+<title>Nhật Bản — Khám phá xứ sở hoa anh đào &amp; Tinh hoa văn hóa</title>
+<meta name="description" content="Khám phá Nhật Bản: tổng quan quốc gia, 8 vùng miền kỳ thú, văn hóa truyền thống và vươn tầm thế giới (Anime, Võ sĩ đạo, Wabi-sabi, Kintsugi, Trà đạo), ẩm thực UNESCO, bốn mùa cùng 7 lộ trình du lịch chuyên sâu.">
 <meta name="author" content="Trang giới thiệu Nhật Bản">
 <meta name="theme-color" content="#0b1220">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Nhật Bản — Khám phá xứ sở hoa anh đào">
-<meta property="og:description" content="Tổng quan, vùng miền, văn hóa, ẩm thực, bốn mùa và kinh nghiệm du lịch Nhật Bản trong một trang.">
+<meta property="og:title" content="Nhật Bản — Xứ sở hoa anh đào &amp; Tinh hoa văn hóa thế giới">
+<meta property="og:description" content="Tổng quan, vùng miền, văn hóa truyền thống &amp; hiện đại vươn tầm thế giới, ẩm thực, bốn mùa và 7 lộ trình du lịch chuyên sâu tại Nhật Bản.">
 <meta property="og:locale" content="vi_VN">
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,6 +43,11 @@
         <li><a href="#lich-trinh">Lịch trình</a></li>
       </ul>
     </nav>
+
+    <button class="zen-audio-btn" id="zenAudioBtn" type="button" aria-pressed="false" aria-label="Bật trải nghiệm âm hưởng chuông gió và không gian thiền Nhật Bản">
+      <span class="zen-audio-icon" aria-hidden="true">🎐</span>
+      <span class="zen-label">Âm hưởng Zen</span>
+    </button>
 
     <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="primaryNav" aria-label="Mở menu">
       <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
@@ -176,8 +181,11 @@
     <div class="hero-veil" aria-hidden="true"></div>
     <canvas class="petals" id="petals" aria-hidden="true"></canvas>
 
+    <div class="vertical-calligraphy" aria-hidden="true">日出づる国 · 富士と桜</div>
+
     <div class="hero-content container">
       <p class="hero-eyebrow">
+        <span class="hanko hanko--square" aria-hidden="true">日本</span>
         <span class="hero-eyebrow-jp" aria-hidden="true">日出づる国</span>
         <span>Xứ sở mặt trời mọc</span>
       </p>
@@ -187,11 +195,11 @@
       </h1>
       <p class="hero-lead">
         Một quần đảo giữa Thái Bình Dương, nơi núi lửa và biển cả cùng nuôi dưỡng
-        một nền văn hóa đã kiên nhẫn gìn giữ hơn một nghìn năm.
+        một nền văn hóa đã kiên nhẫn gìn giữ hơn một nghìn năm và vươn tầm ảnh hưởng toàn cầu.
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#tong-quan">Bắt đầu khám phá</a>
-        <a class="btn btn-ghost" href="#lich-trinh">Lịch trình 7 ngày</a>
+        <a class="btn btn-ghost" href="#lich-trinh">Các lộ trình du lịch</a>
       </div>
       <ul class="hero-meta">
         <li><span class="hm-num">6.852</span><span class="hm-label">hòn đảo</span></li>
@@ -206,37 +214,53 @@
     </a>
   </section>
 
+  <div class="wagara-divider wagara-seigaiha" aria-hidden="true"></div>
+
   <!-- ============ BỐN TỪ KHÓ DỊCH ============ -->
   <section class="words" aria-label="Những từ tiếng Nhật đẹp và khó dịch">
     <div class="container">
       <ul class="words-list">
-        <li class="word reveal" style="--i:0" data-photo="tea" data-photo-title="一期一会 · ichigo ichie" data-photo-caption="Mỗi cuộc gặp chỉ đến một lần, như bát trà trong trà đạo — nên được nâng niu trọn vẹn.">
+        <li class="word reveal" style="--i:0" data-photo="word-ichigo" data-photo-title="一期一会 · ichigo ichie" data-photo-caption="Mỗi cuộc gặp chỉ đến một lần, như bát trà trong trà đạo — nên được nâng niu trọn vẹn.">
           <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: 一期一会 · ichigo ichie"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
           <span class="word-jp" lang="ja">一期一会</span>
           <span class="word-romaji">ichigo ichie</span>
           <p>Mỗi cuộc gặp gỡ chỉ đến một lần trong đời, nên hãy trân trọng khoảnh khắc.</p>
         </li>
-        <li class="word reveal" style="--i:1" data-photo="spring" data-photo-title="物の哀れ · mono no aware" data-photo-caption="Cánh anh đào nở rồi rơi: vẻ đẹp càng rực rỡ thì càng gợi nỗi tiếc nuối.">
+        <li class="word reveal" style="--i:1" data-photo="word-mono" data-photo-title="物の哀れ · mono no aware" data-photo-caption="Cánh anh đào nở rồi rơi: vẻ đẹp càng rực rỡ thì càng gợi nỗi tiếc nuối.">
           <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: 物の哀れ · mono no aware"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
           <span class="word-jp" lang="ja">物の哀れ</span>
           <span class="word-romaji">mono no aware</span>
           <p>Xúc cảm dịu dàng trước vẻ đẹp phù du, biết rằng mọi thứ rồi sẽ qua.</p>
         </li>
-        <li class="word reveal" style="--i:2" data-photo="craft" data-photo-title="侘寂 · wabi-sabi" data-photo-caption="Vườn đá Ryoan-ji — vẻ đẹp của sự giản dị, mộc mạc và không hoàn hảo.">
+        <li class="word reveal" style="--i:2" data-photo="word-wabisabi" data-photo-title="侘寂 · wabi-sabi" data-photo-caption="Vườn đá Ryoan-ji — vẻ đẹp của sự giản dị, mộc mạc và không hoàn hảo.">
           <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: 侘寂 · wabi-sabi"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
           <span class="word-jp" lang="ja">侘寂</span>
           <span class="word-romaji">wabi-sabi</span>
           <p>Vẻ đẹp của sự giản dị, mộc mạc và những điều không hoàn hảo.</p>
         </li>
-        <li class="word reveal" style="--i:3" data-photo="day5" data-photo-title="木漏れ日 · komorebi" data-photo-caption="Ánh nắng lọt qua những thân tre cao vút trong rừng tre Arashiyama.">
+        <li class="word reveal" style="--i:3" data-photo="word-komorebi" data-photo-title="木漏れ日 · komorebi" data-photo-caption="Ánh nắng lọt qua những thân tre cao vút trong rừng tre Arashiyama.">
           <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: 木漏れ日 · komorebi"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
           <span class="word-jp" lang="ja">木漏れ日</span>
           <span class="word-romaji">komorebi</span>
           <p>Ánh nắng lọt qua kẽ lá, đổ xuống thành những vệt sáng lay động.</p>
         </li>
       </ul>
+
+      <!-- Khung thơ Haiku cổ điển -->
+      <div class="haiku-banner reveal" style="--i:4">
+        <div class="haiku-inner">
+          <div class="haiku-text">
+            <p class="haiku-jp">古池や 蛙飛びこむ 水の音</p>
+            <p class="haiku-verse">"Ao xưa tĩnh lặng ngàn năm / Một chú ếch nhỏ nhảy vào nước reo..."</p>
+            <p class="haiku-author">— Thiền sư Matsuo Bashō (松尾芭蕉, 1644–1694)</p>
+          </div>
+          <span class="hanko hanko--circle hanko--gold" aria-hidden="true">風雅</span>
+        </div>
+      </div>
     </div>
   </section>
+
+  <div class="wagara-divider wagara-seigaiha" aria-hidden="true"></div>
 
   <!-- ============ TỔNG QUAN ============ -->
   <section class="section overview" id="tong-quan" data-kanji="一">
@@ -472,58 +496,221 @@
 
   <!-- ============ VĂN HÓA ============ -->
   <section class="section culture" id="van-hoa" data-kanji="三">
+    <div class="vertical-calligraphy" aria-hidden="true">伝統と創造 · 世界へ</div>
+    <div class="kanji-watermark" aria-hidden="true">和</div>
     <div class="container">
       <header class="section-head reveal">
-        <p class="eyebrow"><span class="eyebrow-num" aria-hidden="true">三</span>Văn hóa truyền thống</p>
-        <h2>Những nghi lễ được gìn giữ qua nhiều thế kỷ</h2>
+        <p class="eyebrow"><span class="eyebrow-num" aria-hidden="true">三</span>Văn hóa Nhật Bản</p>
+        <h2>Tinh hoa ngàn năm vươn tầm thế giới</h2>
         <p class="lede">
-          Văn hóa Nhật Bản không nằm trong viện bảo tàng — nó vẫn đang được thực hành mỗi ngày,
-          trong một chén trà, một bộ kimono hay một trận sumo.
+          Văn hóa Nhật Bản không chỉ nằm trong những nghi lễ cổ xưa được nâng niu gìn giữ, mà còn là
+          nguồn cảm hứng bất tận lan tỏa khắp năm châu: từ vũ trụ Anime bùng nổ, triết lý Wabi-sabi định hình
+          kiến trúc hiện đại đến tinh thần võ sĩ đạo và nghệ thuật Kintsugi chữa lành.
         </p>
       </header>
 
+      <!-- Bộ lọc văn hóa -->
+      <div class="culture-filters reveal" style="--i:1">
+        <button class="culture-filter-btn is-active" type="button" data-culture-filter="all" aria-pressed="true">Tất cả tinh hoa (15)</button>
+        <button class="culture-filter-btn" type="button" data-culture-filter="global" aria-pressed="false">Vươn tầm thế giới 🌐</button>
+        <button class="culture-filter-btn" type="button" data-culture-filter="zen" aria-pressed="false">Triết lý &amp; Nghi lễ 🍵</button>
+        <button class="culture-filter-btn" type="button" data-culture-filter="craft" aria-pressed="false">Nghệ thuật &amp; Đời sống 🎋</button>
+      </div>
+
       <div class="culture-grid">
-        <article class="culture-card reveal" style="--i:0" data-photo="tea" data-photo-title="Trà đạo · 茶道" data-photo-caption="Những bát matcha được dâng theo từng động tác chậm rãi trong một buổi trà đạo trên chiếu tatami.">
+        <!-- 1. Anime & Manga -->
+        <article class="culture-card reveal" style="--i:0" data-category="global craft" data-photo="culture-anime" data-photo-title="Anime &amp; Manga · アニメ・漫画" data-photo-caption="Khu phố Akihabara rực rỡ biển hiệu manga, anime và văn hóa Otaku — trung tâm thu hút người hâm mộ từ khắp thế giới.">
+          <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Anime &amp; Manga · アニメ・漫画"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+          <div class="culture-badges">
+            <span class="culture-badge culture-badge--global">Vươn tầm thế giới 🌐</span>
+          </div>
+          <span class="culture-medallion" aria-hidden="true">漫</span>
+          <h3>Anime &amp; Manga <span lang="ja">アニメ・漫画</span></h3>
+          <p class="culture-romaji">Anime · Manga · Otaku</p>
+          <p>Hiện tượng văn hóa đại chúng toàn cầu: từ Studio Ghibli, Doraemon, Dragon Ball đến One Piece, biến phố Akihabara thành thánh địa và cosplay thành ngôn ngữ kết nối giới trẻ khắp hành tinh.</p>
+          <p class="culture-impact"><strong>Ảnh hưởng toàn cầu:</strong> Hàng trăm triệu người học tiếng Nhật qua manga; các liên hoan cosplay và bảo tàng Ghibli đón hàng triệu lượt khách quốc tế mỗi năm.</p>
+        </article>
+
+        <!-- 2. Võ đạo & Samurai -->
+        <article class="culture-card reveal" style="--i:1" data-category="global zen" data-photo="culture-bushido" data-photo-title="Võ đạo &amp; Võ sĩ đạo · 武士道" data-photo-caption="Võ sĩ đạo kết tinh qua những thế võ trầm tĩnh và kỷ luật sắt đá của võ đạo Nhật Bản.">
+          <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Võ đạo &amp; Võ sĩ đạo · 武士道"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+          <div class="culture-badges">
+            <span class="culture-badge culture-badge--global">Vươn tầm thế giới 🌐</span>
+            <span class="culture-badge culture-badge--zen">Triết lý sống</span>
+          </div>
+          <span class="culture-medallion" aria-hidden="true">武</span>
+          <h3>Võ đạo &amp; Samurai <span lang="ja">武士道</span></h3>
+          <p class="culture-romaji">Bushidō · Budō</p>
+          <p>Tinh thần hiệp sĩ với 7 đức hạnh: Nghĩa, Dũng, Nhân, Lễ, Thành, Danh dự và Trung thành. Các môn võ Judo, Karate, Kendo, Aikido đã trở thành môn thi đấu Olympic và di sản rèn luyện nhân cách thế giới.</p>
+          <p class="culture-impact"><strong>Ảnh hưởng toàn cầu:</strong> Hơn 40 triệu môn sinh trên toàn thế giới tập luyện Judo và Karate; triết lý tự chủ và tôn trọng đối thủ được phổ biến rộng khắp.</p>
+        </article>
+
+        <!-- 3. Wabi-Sabi & Thiền tông -->
+        <article class="culture-card reveal" style="--i:2" data-category="global zen" data-photo="culture-wabisabi" data-photo-title="Wabi-Sabi &amp; Thiền · 侘寂" data-photo-caption="Vườn đá thiền Ryoan-ji tại Kyoto — biểu tượng của sự tĩnh lặng và vẻ đẹp tối giản Wabi-sabi.">
+          <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Wabi-Sabi &amp; Thiền · 侘寂"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+          <div class="culture-badges">
+            <span class="culture-badge culture-badge--global">Vươn tầm thế giới 🌐</span>
+            <span class="culture-badge culture-badge--zen">Mỹ học cốt lõi</span>
+          </div>
+          <span class="culture-medallion" aria-hidden="true">寂</span>
+          <h3>Wabi-Sabi &amp; Zen <span lang="ja">侘寂 · 禅</span></h3>
+          <p class="culture-romaji">Wabi-sabi · Zen aesthetics</p>
+          <p>Mỹ học tìm kiếm vẻ đẹp trong những điều mộc mạc, dở dang và vô thường. Nền tảng triết lý này trực tiếp định hình trào lưu thiết kế tối giản (Minimalism), kiến trúc hiện đại thế giới và phong cách Apple.</p>
+          <p class="culture-impact"><strong>Ảnh hưởng toàn cầu:</strong> Trở thành nguồn cảm hứng trung tâm cho các kiến trúc sư vĩ đại như Tadao Ando, Kengo Kuma và phong cách sống giản lược toàn cầu.</p>
+        </article>
+
+        <!-- 4. Kintsugi -->
+        <article class="culture-card reveal" style="--i:3" data-category="global craft" data-photo="culture-kintsugi" data-photo-title="Kintsugi · 金継ぎ" data-photo-caption="Bát gốm cổ được hàn gắn bằng vàng ròng, biến vết nứt vỡ thành đường nét nghệ thuật độc nhất vô nhị.">
+          <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Kintsugi · 金継ぎ"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+          <div class="culture-badges">
+            <span class="culture-badge culture-badge--global">Vươn tầm thế giới 🌐</span>
+            <span class="culture-badge culture-badge--heritage">Nghệ thuật chữa lành</span>
+          </div>
+          <span class="culture-medallion" aria-hidden="true">金</span>
+          <h3>Kintsugi <span lang="ja">金継ぎ</span></h3>
+          <p class="culture-romaji">Nghệ thuật hàn vàng</p>
+          <p>Dùng sơn mài trộn bột vàng để hàn gắn gốm sứ vỡ vụn. Thay vì giấu giếm khiếm khuyết, Kintsugi tôn vinh vết nứt như một dấu ấn lịch sử đáng trân trọng — thông điệp chữa lành tâm hồn lay động thế giới.</p>
+          <p class="culture-impact"><strong>Ảnh hưởng toàn cầu:</strong> Trở thành ẩn dụ tâm lý học quốc tế về sự kiên cường (resilience) và tái sinh sau biến cố cuộc đời.</p>
+        </article>
+
+        <!-- 5. Origami -->
+        <article class="culture-card reveal" style="--i:4" data-category="global craft" data-photo="culture-origami" data-photo-title="Origami · 折り紙" data-photo-caption="Những chú hạc giấy senbazuru — biểu tượng bất diệt của hòa bình, hy vọng và nghệ thuật gấp giấy Nhật Bản.">
+          <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Origami · 折り紙"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+          <div class="culture-badges">
+            <span class="culture-badge culture-badge--global">Vươn tầm thế giới 🌐</span>
+          </div>
+          <span class="culture-medallion" aria-hidden="true">折</span>
+          <h3>Origami <span lang="ja">折り紙</span></h3>
+          <p class="culture-romaji">Nghệ thuật gấp giấy</p>
+          <p>Nghệ thuật gấp giấy không dùng kéo hay hồ dán, biến tờ giấy phẳng thành muôn hình vạn trạng. Ngày nay, nguyên lý nếp gấp Origami được ứng dụng vào thiết kế tấm pin mặt trời vệ tinh không gian NASA và stent y tế tim mạch.</p>
+          <p class="culture-impact"><strong>Ảnh hưởng toàn cầu:</strong> Cầu nối đột phá giữa mỹ thuật dân gian với hình học toán học, kỹ thuật hàng không vũ trụ và công nghệ nano.</p>
+        </article>
+
+        <!-- 6. Tranh Phù thế Ukiyo-e -->
+        <article class="culture-card reveal" style="--i:5" data-category="global craft" data-photo="culture-ukiyoe" data-photo-title="Ukiyo-e · 浮世絵" data-photo-caption="Tranh khắc gỗ Ukiyo-e thời Edo miêu tả cảnh sắc núi non và cuộc sống thị dân xưa của Nhật Bản.">
+          <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ukiyo-e · 浮世絵"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+          <div class="culture-badges">
+            <span class="culture-badge culture-badge--global">Vươn tầm thế giới 🌐</span>
+            <span class="culture-badge culture-badge--heritage">Japonisme</span>
+          </div>
+          <span class="culture-medallion" aria-hidden="true">浮</span>
+          <h3>Tranh Phù thế <span lang="ja">浮世絵</span></h3>
+          <p class="culture-romaji">Ukiyo-e · Tranh khắc gỗ</p>
+          <p>Dòng tranh khắc gỗ dân gian thế kỷ 17–19 với kiệt tác "Sóng lừng ngoài khơi Kanagawa" của Hokusai. Dòng tranh này đã khởi xướng làn sóng Japonisme cuồng nhiệt tại Tây Âu, làm thay đổi tư duy của Vincent van Gogh và Monet.</p>
+          <p class="culture-impact"><strong>Ảnh hưởng toàn cầu:</strong> Đặt nền móng cho hội họa Ấn tượng phương Tây và là cội nguồn cảm hứng cho nghệ thuật đồ họa hiện đại.</p>
+        </article>
+
+        <!-- 7. Tinh thần Omotenashi -->
+        <article class="culture-card reveal" style="--i:6" data-category="global zen" data-photo="culture-omotenashi" data-photo-title="Omotenashi · おもてなし" data-photo-caption="Nụ cười và cung cách cúi chào chân thành — nét đẹp hiếu khách đỉnh cao xuất phát từ lòng tôn trọng.">
+          <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Omotenashi · おもてなし"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+          <div class="culture-badges">
+            <span class="culture-badge culture-badge--global">Vươn tầm thế giới 🌐</span>
+            <span class="culture-badge culture-badge--zen">Chuẩn mực hiếu khách</span>
+          </div>
+          <span class="culture-medallion" aria-hidden="true">誠</span>
+          <h3>Omotenashi <span lang="ja">おもてなし</span></h3>
+          <p class="culture-romaji">Lòng hiếu khách đỉnh cao</p>
+          <p>Nghệ thuật tiếp đãi bằng cả trái tim thuần khiết mà không đòi hỏi đền đáp. Người phục vụ luôn tinh tế đoán trước nhu cầu của khách trước khi họ cất lời — chuẩn mực vàng của ngành dịch vụ toàn cầu.</p>
+          <p class="culture-impact"><strong>Ảnh hưởng toàn cầu:</strong> Trở thành bài học kiểu mẫu tại các trường quản trị khách sạn hàng đầu Thụy Sĩ, Pháp và các thương hiệu xa xỉ quốc tế.</p>
+        </article>
+
+        <!-- 8. Takumi & Monozukuri -->
+        <article class="culture-card reveal" style="--i:7" data-category="global craft" data-photo="culture-takumi" data-photo-title="Takumi &amp; Monozukuri · 匠" data-photo-caption="Bậc thầy nghệ nhân miệt mài gọt giũa chi tiết với sự tỉ mỉ tuyệt đối qua hàng thập kỷ.">
+          <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Takumi &amp; Monozukuri · 匠"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+          <div class="culture-badges">
+            <span class="culture-badge culture-badge--global">Vươn tầm thế giới 🌐</span>
+          </div>
+          <span class="culture-medallion" aria-hidden="true">匠</span>
+          <h3>Takumi &amp; Chế tác <span lang="ja">匠 · モノづくり</span></h3>
+          <p class="culture-romaji">Takumi · Nghệ nhân bậc thầy</p>
+          <p>Đạo đức nghề nghiệp tận hiến: cần hơn 60.000 giờ rèn luyện để được công nhận danh hiệu Takumi. Từ rèn kiếm Katana, may đo Kimono đến sản xuất cơ khí chính xác, sự hoàn hảo đến từng micromet đã tạo nên danh tiếng "Made in Japan".</p>
+          <p class="culture-impact"><strong>Ảnh hưởng toàn cầu:</strong> Triết lý sản xuất Kaizen và Takumi được các tập đoàn sản xuất hàng đầu thế giới áp dụng như kim chỉ nam chất lượng.</p>
+        </article>
+
+        <!-- 9. Bonsai & Vườn thiền Karesansui -->
+        <article class="culture-card reveal" style="--i:8" data-category="global zen" data-photo="culture-bonsai" data-photo-title="Bonsai &amp; Vườn thiền · 盆栽" data-photo-caption="Cây bonsai hàng trăm năm tuổi được uốn nắn công phu, thu nhỏ cả một cánh rừng già vào chậu gốm.">
+          <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Bonsai &amp; Vườn thiền · 盆栽"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+          <div class="culture-badges">
+            <span class="culture-badge culture-badge--global">Vươn tầm thế giới 🌐</span>
+            <span class="culture-badge culture-badge--zen">Nghệ thuật tĩnh tâm</span>
+          </div>
+          <span class="culture-medallion" aria-hidden="true">栽</span>
+          <h3>Bonsai &amp; Vườn thiền <span lang="ja">盆栽 · 枯山水</span></h3>
+          <p class="culture-romaji">Bonsai · Karesansui</p>
+          <p>Nghệ thuật thu nhỏ vũ trụ đại ngàn vào một chậu cây cảnh hoặc một khoảnh sỏi trắng cào sóng nước. Đó là không gian chiêm nghiệm tĩnh tại, nơi con người tìm lại sự cân bằng sâu thẳm giữa cuộc sống bộn bề.</p>
+          <p class="culture-impact"><strong>Ảnh hưởng toàn cầu:</strong> Hiệp hội Bonsai quốc tế có mặt tại hơn 80 quốc gia; nghệ thuật vườn khô Nhật Bản xuất hiện tại các bảo tàng hàng đầu thế giới.</p>
+        </article>
+
+        <!-- 10. Trà đạo -->
+        <article class="culture-card reveal" style="--i:9" data-category="zen" data-photo="tea" data-photo-title="Trà đạo · 茶道" data-photo-caption="Những bát matcha được dâng theo từng động tác chậm rãi trong một buổi trà đạo trên chiếu tatami.">
           <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Trà đạo · 茶道"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+          <div class="culture-badges">
+            <span class="culture-badge culture-badge--zen">Di sản ngàn năm</span>
+          </div>
           <span class="culture-medallion" aria-hidden="true">茶</span>
           <h3>Trà đạo <span lang="ja">茶道</span></h3>
           <p class="culture-romaji">Sadō · chanoyu</p>
-          <p>Pha và thưởng trà matcha như một nghi lễ thiền định, nơi mỗi động tác đều được thực hiện chậm rãi và có ý thức.</p>
+          <p>Pha và thưởng trà matcha như một nghi lễ thiền định, nơi từng động tác đều chậm rãi và quán chiếu tâm mình theo 4 nguyên tắc: Hòa (hài hòa), Kính (tôn trọng), Thanh (thanh tịnh), Tịch (an tĩnh tuyệt đối).</p>
         </article>
-        <article class="culture-card reveal" style="--i:1" data-photo="kimono" data-photo-title="Kimono · 着物" data-photo-caption="Một maiko trong bộ kimono đỏ, che ô giấy truyền thống trên con phố cổ Kyoto.">
+
+        <!-- 11. Kimono -->
+        <article class="culture-card reveal" style="--i:10" data-category="craft" data-photo="kimono" data-photo-title="Kimono · 着物" data-photo-caption="Một maiko trong bộ kimono đỏ, che ô giấy truyền thống trên con phố cổ Kyoto.">
           <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Kimono · 着物"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+          <div class="culture-badges">
+            <span class="culture-badge culture-badge--heritage">Quốc phục truyền thống</span>
+          </div>
           <span class="culture-medallion" aria-hidden="true">着</span>
-          <h3>Kimono <span lang="ja">着物</span></h3>
-          <p class="culture-romaji">Kimono</p>
-          <p>Trang phục truyền thống với hoa văn, màu sắc và cách thắt đai obi thể hiện mùa, dịp và cả tuổi tác người mặc.</p>
+          <h3>Kimono &amp; Yukata <span lang="ja">着物</span></h3>
+          <p class="culture-romaji">Kimono · Y phục truyền thống</p>
+          <p>Trang phục truyền thống với kỹ thuật dệt nhuộm thủ công tinh xảo hàng trăm năm. Từng hoa văn, chất liệu lụa và nút thắt đai Obi đều mang thông điệp về mùa màng, địa vị và nét duyên dáng phương Đông.</p>
         </article>
-        <article class="culture-card reveal" style="--i:2" data-photo="sumo" data-photo-title="Sumo · 相撲" data-photo-caption="Võ đài sumo (dohyō) giữa nhà thi đấu, nơi mỗi trận đấu có thể chỉ kéo dài vài giây.">
+
+        <!-- 12. Sumo -->
+        <article class="culture-card reveal" style="--i:11" data-category="craft zen" data-photo="sumo" data-photo-title="Sumo · 相撲" data-photo-caption="Võ đài sumo (dohyō) giữa nhà thi đấu, nơi mỗi trận đấu có thể chỉ kéo dài vài giây.">
           <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Sumo · 相撲"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+          <div class="culture-badges">
+            <span class="culture-badge culture-badge--heritage">Nghi lễ Thần đạo</span>
+          </div>
           <span class="culture-medallion" aria-hidden="true">相</span>
           <h3>Sumo <span lang="ja">相撲</span></h3>
-          <p class="culture-romaji">Sumō</p>
-          <p>Môn võ cổ nhất Nhật Bản, gắn với nghi lễ Thần đạo: hai đô vật thi đấu trong vòng tròn, quyết định bằng một đòn dứt khoát.</p>
+          <p class="culture-romaji">Sumō · Quốc võ cổ xưa</p>
+          <p>Môn võ hơn 1.500 năm tuổi gắn liền với Thần đạo: nghi lễ rải muối tẩy uế võ đài, trang phục Gyoji truyền thống và cuộc so tài sức mạnh thuần khiết nhưng thấm đượm phong thái tĩnh tâm tuyệt đối.</p>
         </article>
-        <article class="culture-card reveal" style="--i:3" data-photo="hanami" data-photo-title="Hanami · 花見" data-photo-caption="Người Nhật trải bạt dưới tán anh đào để ăn uống, trò chuyện và ngắm hoa nở.">
+
+        <!-- 13. Hanami -->
+        <article class="culture-card reveal" style="--i:12" data-category="zen" data-photo="hanami" data-photo-title="Hanami · 花見" data-photo-caption="Người Nhật trải bạt dưới tán anh đào để ăn uống, trò chuyện và ngắm hoa nở.">
           <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Hanami · 花見"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+          <div class="culture-badges">
+            <span class="culture-badge culture-badge--zen">Mono no aware</span>
+          </div>
           <span class="culture-medallion" aria-hidden="true">花</span>
           <h3>Hanami <span lang="ja">花見</span></h3>
-          <p class="culture-romaji">Ngắm hoa anh đào</p>
-          <p>Mỗi độ xuân về, người Nhật lại họp mặt dưới tán anh đào để ăn uống, trò chuyện và ngắm những cánh hoa rơi.</p>
+          <p class="culture-romaji">Thưởng hoa anh đào</p>
+          <p>Mỗi độ xuân về, hàng triệu gia đình và bạn bè trải bạt dưới tán anh đào rực rỡ để cùng thưởng thức bento, trò chuyện và chiêm nghiệm triết lý Mono no aware trước cánh hoa bay trong gió.</p>
         </article>
-        <article class="culture-card reveal" style="--i:4" data-photo="matsuri" data-photo-title="Matsuri · 祭り" data-photo-caption="Đoàn rước kiệu mikoshi đi qua cổng torii trong một lễ hội mùa hè.">
+
+        <!-- 14. Matsuri -->
+        <article class="culture-card reveal" style="--i:13" data-category="craft" data-photo="matsuri" data-photo-title="Matsuri · 祭り" data-photo-caption="Đoàn rước kiệu mikoshi đi qua cổng torii trong một lễ hội mùa hè.">
           <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Matsuri · 祭り"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+          <div class="culture-badges">
+            <span class="culture-badge culture-badge--heritage">Lễ hội dân gian</span>
+          </div>
           <span class="culture-medallion" aria-hidden="true">祭</span>
-          <h3>Matsuri <span lang="ja">祭り</span></h3>
-          <p class="culture-romaji">Lễ hội</p>
-          <p>Hàng nghìn lễ hội quanh năm với kiệu rước mikoshi, trống taiko, yukata và những màn pháo hoa mùa hè.</p>
+          <h3>Matsuri &amp; Taiko <span lang="ja">祭り</span></h3>
+          <p class="culture-romaji">Lễ hội truyền thống</p>
+          <p>Không khí rộn rã với hàng vạn người rước kiệu Mikoshi qua các góc phố cổ, tiếng trống Taiko trầm hùng rung chuyển không gian, hội chợ phố đêm Yatai và những màn pháo hoa Hanabi huyền ảo mùa hạ.</p>
         </article>
-        <article class="culture-card reveal" style="--i:5" data-photo="onsen" data-photo-title="Onsen · 温泉" data-photo-caption="Bồn onsen ngoài trời xây bằng đá, nhìn ra khu vườn chuyển màu mùa thu.">
+
+        <!-- 15. Onsen -->
+        <article class="culture-card reveal" style="--i:14" data-category="zen" data-photo="onsen" data-photo-title="Onsen · 温泉" data-photo-caption="Bồn onsen ngoài trời xây bằng đá, nhìn ra khu vườn chuyển màu mùa thu.">
           <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Onsen · 温泉"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+          <div class="culture-badges">
+            <span class="culture-badge culture-badge--zen">Trị liệu tự nhiên</span>
+          </div>
           <span class="culture-medallion" aria-hidden="true">湯</span>
-          <h3>Onsen <span lang="ja">温泉</span></h3>
-          <p class="culture-romaji">Suối nước nóng</p>
-          <p>Ngâm mình trong nước khoáng nóng tự nhiên — phần thưởng cuối ngày, cũng là cách người Nhật thư giãn và chữa lành.</p>
+          <h3>Onsen &amp; Ryokan <span lang="ja">温泉</span></h3>
+          <p class="culture-romaji">Liệu pháp suối khoáng Toji</p>
+          <p>Ngâm mình trong dòng khoáng nóng tự nhiên bắt nguồn từ lòng đất núi lửa. Văn hóa tắm onsen kết hợp nghỉ dưỡng tại lữ quán Ryokan truyền thống và thưởng thức Kaiseki là đỉnh cao thư giãn của nước Nhật.</p>
         </article>
       </div>
     </div>
@@ -824,78 +1011,781 @@
 
   <!-- ============ LỊCH TRÌNH ============ -->
   <section class="section itinerary" id="lich-trinh" data-kanji="七">
+    <div class="vertical-calligraphy" aria-hidden="true">日本巡礼 · 旅の軌跡</div>
+    <div class="kanji-watermark" aria-hidden="true">旅</div>
     <div class="container">
       <header class="section-head reveal">
-        <p class="eyebrow"><span class="eyebrow-num" aria-hidden="true">七</span>Lịch trình gợi ý</p>
-        <h2>7 ngày cho lần đầu đến Nhật Bản</h2>
+        <p class="eyebrow"><span class="eyebrow-num" aria-hidden="true">七</span>Cẩm nang Lộ trình du lịch</p>
+        <h2>Khám phá Nhật Bản theo cách riêng của bạn</h2>
         <p class="lede">
-          Hành trình kinh điển Tokyo – Hakone – Kyoto – Nara – Osaka, vừa đủ để cảm nhận
-          cả nhịp sống đô thị lẫn chiều sâu văn hóa cổ.
+          Từ "Cung Đường Vàng" kinh điển, xứ tuyết trắng Hokkaido, ngôi làng cổ tích tuyết Shirakawa-go
+          cho đến thánh địa Otaku Tokyo hay hành hương rừng thiêng ngàn năm — 7 lộ trình được thiết kế tỉ mỉ
+          kèm kinh nghiệm thực tế giúp chuyến đi của bạn trọn vẹn nhất.
         </p>
       </header>
 
-      <ol class="timeline">
-        <li class="day reveal" style="--i:0" data-photo="day1" data-photo-title="Ngày 1 · Tokyo — Shinjuku &amp; Shibuya" data-photo-caption="Shinjuku về đêm: những tòa nhà chọc trời sáng đèn của Tokyo.">
-          <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 1 · Tokyo — Shinjuku &amp; Shibuya"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
-          <div class="day-badge" aria-hidden="true">01</div>
-          <div class="day-body">
-            <h3>Tokyo — Shinjuku &amp; Shibuya</h3>
-            <p>Chợ đêm, ngã tư Shibuya nhộn nhịp, đài quan sát Tokyo Metropolitan. Làm quen với nhịp sống thành phố.</p>
+      <!-- Bộ chọn tab lộ trình -->
+      <div class="itinerary-selector reveal" style="--i:1">
+        <div class="itinerary-nav" role="tablist" aria-label="Chọn lộ trình du lịch Nhật Bản">
+          <button class="itinerary-tab is-active" id="tab-route-1" type="button" role="tab" aria-selected="true" aria-controls="panel-route-1" tabindex="0">
+            <span class="itinerary-tab-icon" aria-hidden="true">🌸</span>
+            <span class="itinerary-tab-title">Cung Đường Vàng</span>
+            <span class="itinerary-tab-meta">7N6Đ · Kinh điển</span>
+          </button>
+
+          <button class="itinerary-tab" id="tab-route-2" type="button" role="tab" aria-selected="false" aria-controls="panel-route-2" tabindex="-1">
+            <span class="itinerary-tab-icon" aria-hidden="true">❄️</span>
+            <span class="itinerary-tab-title">Xứ Tuyết Hokkaido</span>
+            <span class="itinerary-tab-meta">6N5Đ · Thiên nhiên</span>
+          </button>
+
+          <button class="itinerary-tab" id="tab-route-3" type="button" role="tab" aria-selected="false" aria-controls="panel-route-3" tabindex="-1">
+            <span class="itinerary-tab-icon" aria-hidden="true">🏮</span>
+            <span class="itinerary-tab-title">Cổ Tích Shirakawa-go</span>
+            <span class="itinerary-tab-meta">5N4Đ · Di sản Alps</span>
+          </button>
+
+          <button class="itinerary-tab" id="tab-route-4" type="button" role="tab" aria-selected="false" aria-controls="panel-route-4" tabindex="-1">
+            <span class="itinerary-tab-icon" aria-hidden="true">♨️</span>
+            <span class="itinerary-tab-title">Onsen &amp; Núi Lửa Kyushu</span>
+            <span class="itinerary-tab-meta">5N4Đ · Nghỉ dưỡng</span>
+          </button>
+
+          <button class="itinerary-tab" id="tab-route-5" type="button" role="tab" aria-selected="false" aria-controls="panel-route-5" tabindex="-1">
+            <span class="itinerary-tab-icon" aria-hidden="true">⚡</span>
+            <span class="itinerary-tab-title">Tokyo Otaku &amp; Pop</span>
+            <span class="itinerary-tab-meta">4N3Đ · Hiện đại</span>
+          </button>
+
+          <button class="itinerary-tab" id="tab-route-6" type="button" role="tab" aria-selected="false" aria-controls="panel-route-6" tabindex="-1">
+            <span class="itinerary-tab-icon" aria-hidden="true">⛩️</span>
+            <span class="itinerary-tab-title">Hành Hương Rừng Cổ</span>
+            <span class="itinerary-tab-meta">5N4Đ · Kumano Kodo</span>
+          </button>
+
+          <button class="itinerary-tab" id="tab-route-7" type="button" role="tab" aria-selected="false" aria-controls="panel-route-7" tabindex="-1">
+            <span class="itinerary-tab-icon" aria-hidden="true">🏝️</span>
+            <span class="itinerary-tab-title">Biển Đảo Okinawa</span>
+            <span class="itinerary-tab-meta">4N3Đ · Nhiệt đới</span>
+          </button>
+        </div>
+
+        <!-- ================= LỘ TRÌNH 1: CUNG ĐƯỜNG VÀNG ================= -->
+        <div class="itinerary-panel is-active" id="panel-route-1" role="tabpanel" aria-labelledby="tab-route-1">
+          <div class="route-hero-card">
+            <div class="route-header">
+              <div class="route-title-wrap">
+                <h3>Cung Đường Vàng Kinh Điển <span lang="ja">ゴールデンルート</span></h3>
+                <p>Tokyo ➔ Hakone &amp; Núi Phú Sĩ ➔ Cố đô Kyoto ➔ Nara ➔ Osaka</p>
+              </div>
+              <div class="route-badges">
+                <span class="route-pill">🌸 Phù hợp nhất cho lần đầu</span>
+                <span class="route-pill">🚄 JR Pass Toàn Quốc</span>
+              </div>
+            </div>
+
+            <dl class="route-meta-grid">
+              <div class="route-meta-box"><dt>Thời lượng</dt><dd>7 ngày 6 đêm</dd></div>
+              <div class="route-meta-box"><dt>Mùa lý tưởng</dt><dd>Mùa xuân (hoa anh đào) &amp; Mùa thu (lá đỏ)</dd></div>
+              <div class="route-meta-box"><dt>Di chuyển chính</dt><dd>Shinkansen Tokaido &amp; Tàu nội đô</dd></div>
+              <div class="route-meta-box"><dt>Ngân sách ước tính</dt><dd>32 - 45 triệu VNĐ / người</dd></div>
+            </dl>
+
+            <div class="route-highlights-box">
+              <h4>Điểm nhấn không thể bỏ lỡ</h4>
+              <ul>
+                <li>Ngắm núi Phú Sĩ soi bóng trên hồ Kawaguchi hoặc từ cáp treo Owakudani Hakone</li>
+                <li>Dạo bước qua 10.000 cổng torii đỏ son đền Fushimi Inari Taisha tại Kyoto</li>
+                <li>Gặp gỡ đàn hươu tự do công viên Nara và đền Todai-ji vĩ đại</li>
+                <li>Khám phá phố ẩm thực đêm không ngủ Dotonbori rực rỡ biển hiệu Glico Osaka</li>
+              </ul>
+            </div>
           </div>
-        </li>
-        <li class="day reveal" style="--i:1" data-photo="day2" data-photo-title="Ngày 2 · Tokyo — Asakusa, Ueno, Akihabara" data-photo-caption="Cổng Kaminarimon của đền Sensō-ji ở Asakusa — nơi du khách dừng chân chụp ảnh mỗi ngày.">
-          <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 2 · Tokyo — Asakusa, Ueno, Akihabara"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
-          <div class="day-badge" aria-hidden="true">02</div>
-          <div class="day-body">
-            <h3>Tokyo — Asakusa, Ueno, Akihabara</h3>
-            <p>Đền Sensō-ji buổi sáng sớm, bảo tàng Ueno, phố điện tử Akihabara và bảo tàng kỹ thuật số teamLab buổi tối.</p>
+
+          <ol class="timeline">
+            <li class="day" data-photo="day1" data-photo-title="Ngày 1 · Tokyo — Shinjuku &amp; Shibuya" data-photo-caption="Shinjuku về đêm: những tòa nhà chọc trời sáng đèn của Tokyo.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 1 · Tokyo — Shinjuku &amp; Shibuya"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">01<span class="day-kanji-num">初日</span></div>
+              <div class="day-body">
+                <h3>Tokyo — Chào đón tại Siêu đô thị tương lai (Shinjuku &amp; Shibuya)</h3>
+                <p>Hạ cánh tại Haneda hoặc Narita, kích hoạt thẻ Suica/Pasmo. Chiều dạo ngã tư Shibuya nhộn nhịp nhất thế giới, check-in tượng chú chó trung kiên Hachiko, lên đài quan sát Shibuya Sky ngắm hoàng hôn Tokyo. Tối lạc bước giữa những con hẻm ẩm thực Omoide Yokocho Shinjuku.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🍜</span><span><strong>Món nên thử:</strong> Ramen Shoyu hoặc Yakitori nóng hổi tại hẻm Omoide Yokocho.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Đặt vé Shibuya Sky trước 2 tuần để chọn khung giờ hoàng hôn đẹp nhất.</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="day2" data-photo-title="Ngày 2 · Tokyo — Asakusa &amp; Akihabara" data-photo-caption="Cổng Kaminarimon của đền Sensō-ji ở Asakusa — nơi du khách dừng chân chụp ảnh mỗi ngày.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 2 · Tokyo — Asakusa &amp; Akihabara"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">02<span class="day-kanji-num">二日</span></div>
+              <div class="day-body">
+                <h3>Tokyo — Giao thoa Cổ kính và Hiện đại (Sensō-ji, Ueno, Akihabara)</h3>
+                <p>Sáng sớm viếng ngôi chùa cổ nhất Tokyo Sensō-ji Asakusa, đi dạo phố mua sắm Nakamise nếm bánh ningyo-yaki. Trưa qua công viên và bảo tàng Ueno. Chiều đắm chìm trong thế giới manga/anime tại thánh địa điện tử Akihabara và ngắm tháp truyền hình Tokyo Skytree.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🍣</span><span><strong>Món nên thử:</strong> Tempura giòn rụm lâu đời quanh Asakusa hoặc sushi băng chuyền Ueno.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Đến Sensō-ji trước 8h sáng để chụp ảnh vắng người trước cổng Kaminarimon khổng lồ.</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="day3" data-photo-title="Ngày 3 · Hakone — Phú Sĩ &amp; Onsen" data-photo-caption="Mặt hồ Kawaguchi phẳng lặng phản chiếu núi Phú Sĩ dưới nắng sớm.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 3 · Hakone — Phú Sĩ &amp; Onsen"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">03<span class="day-kanji-num">三日</span></div>
+              <div class="day-body">
+                <h3>Hakone — Chiêm ngưỡng Núi Phú Sĩ &amp; Tắm khoáng Onsen</h3>
+                <p>Đi tàu tốc hành Romancecar từ Shinjuku đến Hakone. Đi thuyền cướp biển trên hồ Ashi ngắm cổng Torii trên mặt nước và núi Phú Sĩ. Đi cáp treo lên thung lũng lưu huỳnh Owakudani nếm trứng đen kéo dài tuổi thọ. Tối nhận phòng ryokan truyền thống, ngâm mình trong onsen khoáng nóng và thưởng thức bữa tiệc Kaiseki.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🥚</span><span><strong>Món nên thử:</strong> Trứng đen Kuro-tamago luộc từ suối khoáng nóng Owakudani &amp; Bữa tối Kaiseki đa món.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Mua vé trọn gói Hakone Freepass để di chuyển không giới hạn trên cáp treo, tàu điện răng cưa và du thuyền.</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="day4" data-photo-title="Ngày 4 · Kyoto — Fushimi Inari &amp; Gion" data-photo-caption="Chùa Kiyomizu-dera giữa mùa lá đỏ, nhìn từ sân chùa xuống thành phố Kyoto.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 4 · Kyoto — Fushimi Inari &amp; Gion"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">04<span class="day-kanji-num">四日</span></div>
+              <div class="day-body">
+                <h3>Cố đô Kyoto — Vạn cổng Torii &amp; Phố Geisha Gion</h3>
+                <p>Trải nghiệm tàu Shinkansen lao vút đến ga Kyoto. Bắt đầu với đền Fushimi Inari Taisha men theo triền núi qua hàng nghìn cổng Torii đỏ rực. Chiều tham quan chùa Thanh Thủy Kiyomizu-dera bằng gỗ dựng trên vách núi. Chiều tối dạo bước trên những con phố lát đá Ninenzaka và phố Geisha Gion bên dòng sông Kamo thơ mộng.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🍵</span><span><strong>Món nên thử:</strong> Kem matcha Uji đậm vị và mì đậu hũ Kyoto Yudofu thanh tao.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Hãy giữ phép lịch sự tại Gion: không chụp ảnh cận cảnh hoặc chặn đường các nàng Geiko/Maiko.</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="day5" data-photo-title="Ngày 5 · Kyoto — Rừng tre Arashiyama &amp; Chùa Vàng" data-photo-caption="Con đường tre Arashiyama, hai bên là tre cao vút che kín ánh nắng.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 5 · Kyoto — Rừng tre Arashiyama &amp; Chùa Vàng"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">05<span class="day-kanji-num">五日</span></div>
+              <div class="day-body">
+                <h3>Kyoto — Rừng tre Arashiyama &amp; Chùa Vàng Kinkaku-ji</h3>
+                <p>Đón bình minh tại rừng tre Arashiyama khi tiếng gió rào rạt xuyên qua rặng tre xanh ngắt. Tham quan đền Tenryu-ji và cây cầu cổ Togetsukyo. Chiều ghé chùa Vàng Kinkaku-ji lấp lánh soi bóng xuống mặt hồ gương. Buổi tối có thể tham gia trải nghiệm nghi lễ trà đạo truyền thống.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🍢</span><span><strong>Món nên thử:</strong> Bánh dango nướng phết tương ngọt mặn &amp; thịt bò Wagyu nướng xiên que Arashiyama.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Đến rừng tre trước 7h30 sáng để tận hưởng không gian tĩnh lặng không bóng người.</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="day6" data-photo-title="Ngày 6 · Nara &amp; Osaka" data-photo-caption="Những chú nai đi lại giữa sân chùa Tōdai-ji ở Nara.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 6 · Nara &amp; Osaka"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">06<span class="day-kanji-num">六日</span></div>
+              <div class="day-body">
+                <h3>Cố đô Nara &amp; Trái tim ẩm thực Osaka (Dotonbori)</h3>
+                <p>Đi tàu 45 phút tới Nara. Mua bánh shika-senbei cho những chú nai cúi chào tại công viên Nara, chiêm bái tượng Đại Phật bằng đồng lớn nhất Nhật Bản tại chùa Todai-ji. Chiều di chuyển về Osaka, khám phá khu phố ăn chơi Dotonbori, chụp ảnh cùng biểu tượng Glico Man và du thuyền trên sông Tombori.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🐙</span><span><strong>Món nên thử:</strong> Bánh bạch tuộc Takoyaki bỏng lưỡi và bánh xèo Okonomiyaki Osaka xèo xèo thơm nức.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Nai ở Nara rất thông minh, hãy giơ hai tay lên nếu đã hết bánh để chúng tự rời đi.</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="day7" data-photo-title="Ngày 7 · Osaka — Mua sắm &amp; Tạm biệt" data-photo-caption="Phố Dotonbori bên kênh đào, bảng hiệu và đèn lồng rực rỡ về đêm.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 7 · Osaka — Mua sắm &amp; Tạm biệt"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">07<span class="day-kanji-num">結び</span></div>
+              <div class="day-body">
+                <h3>Osaka — Thành cổ Osaka, Thiên đường mua sắm &amp; Về nước</h3>
+                <p>Sáng ghé thăm Lâu đài Osaka uy nghiêm với công viên bao quanh rực rỡ theo mùa. Mua sắm quà lưu niệm, mỹ phẩm và đồ điện tử miễn thuế tại Shinsaibashi và trung tâm thương mại Namba Parks. Chiều đón tàu Rapi:t ra sân bay quốc tế Kansai (KIX) chào tạm biệt xứ Phù Tang.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🍢</span><span><strong>Món nên thử:</strong> Xiên que chiên giòn Kushikatsu tại phố cổ Shinsekai (nhớ quy tắc không chấm nước sốt lần hai!).</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Giữ lại hộ chiếu gốc để làm thủ tục hoàn thuế 10% ngay tại quầy thanh toán khi mua từ 5.000 yên.</span></div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- ================= LỘ TRÌNH 2: HOKKAIDO TUYẾT TRẮNG ================= -->
+        <div class="itinerary-panel" id="panel-route-2" role="tabpanel" aria-labelledby="tab-route-2" hidden>
+          <div class="route-hero-card">
+            <div class="route-header">
+              <div class="route-title-wrap">
+                <h3>Xứ Tuyết &amp; Thiên Nhiên Kỳ Vĩ Hokkaido <span lang="ja">北海道の大自然</span></h3>
+                <p>Sapporo ➔ Cảng cổ Otaru ➔ Cánh đồng hoa Furano &amp; Biei ➔ Suối khoáng Noboribetsu ➔ Hồ Toya</p>
+              </div>
+              <div class="route-badges">
+                <span class="route-pill">❄️ Tuyết trắng &amp; Đồng hoa</span>
+                <span class="route-pill">🦀 Thiên đường hải sản</span>
+              </div>
+            </div>
+
+            <dl class="route-meta-grid">
+              <div class="route-meta-box"><dt>Thời lượng</dt><dd>6 ngày 5 đêm</dd></div>
+              <div class="route-meta-box"><dt>Mùa lý tưởng</dt><dd>Mùa đông (tháng 12 - 2 ngắm tuyết) hoặc Mùa hè (tháng 7 ngắm hoa)</dd></div>
+              <div class="route-meta-box"><dt>Di chuyển chính</dt><dd>Tàu JR Hokkaido Rail Pass hoặc Thuê xe tự lái</dd></div>
+              <div class="route-meta-box"><dt>Ngân sách ước tính</dt><dd>35 - 50 triệu VNĐ / người</dd></div>
+            </dl>
+
+            <div class="route-highlights-box">
+              <h4>Điểm nhấn không thể bỏ lỡ</h4>
+              <ul>
+                <li>Chiêm ngưỡng các tác phẩm điêu khắc băng tuyết khổng lồ tại lễ hội Sapporo Snow Festival</li>
+                <li>Dạo bước bên kênh đào Otaru lung linh ánh đèn dầu cổ điển và thưởng thức hộp nhạc</li>
+                <li>Đắm chìm trong thảm hoa oải hương ngút ngàn Furano và mặt nước xanh ngọc Hồ Biei</li>
+                <li>Ngâm mình trong suối khoáng nóng bốc khói nghi ngút tại "Thung lũng địa ngục" Noboribetsu</li>
+              </ul>
+            </div>
           </div>
-        </li>
-        <li class="day reveal" style="--i:2" data-photo="day3" data-photo-title="Ngày 3 · Hakone — ngắm Phú Sĩ, nghỉ onsen" data-photo-caption="Mặt hồ Kawaguchi phẳng lặng phản chiếu núi Phú Sĩ dưới nắng sớm.">
-          <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 3 · Hakone — ngắm Phú Sĩ, nghỉ onsen"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
-          <div class="day-badge" aria-hidden="true">03</div>
-          <div class="day-body">
-            <h3>Hakone — ngắm Phú Sĩ, nghỉ onsen</h3>
-            <p>Tàu đến Hakone, ngắm núi Phú Sĩ từ hồ Ashi, đi cáp treo Owakudani rồi về ryokan nghỉ ngơi trong onsen ngoài trời.</p>
+
+          <ol class="timeline">
+            <li class="day" data-photo="hkd1" data-photo-title="Ngày 1 · Sapporo — Thành phố tuyết" data-photo-caption="Tác phẩm điêu khắc tuyết được chiếu sáng tại lễ hội tuyết Sapporo.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 1 · Sapporo — Thành phố tuyết"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">01<span class="day-kanji-num">初日</span></div>
+              <div class="day-body">
+                <h3>Sapporo — Trái tim phương Bắc (Công viên Odori &amp; Phố mì Susukino)</h3>
+                <p>Hạ cánh tại sân bay New Chitose. Check-in khách sạn tại trung tâm Sapporo, đi dạo công viên Odori và tháp truyền hình Sapporo TV Tower. Tối khám phá khu phố giải trí Susukino sôi động và con hẻm Ganso Ramen Yokocho huyền thoại.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🍜</span><span><strong>Món nên thử:</strong> Miso Butter Corn Ramen (Mì ramen miso bơ ngô béo ngậy đặc trưng Sapporo).</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Mùa đông cần mang giày đế bám tuyết chống trơn trượt chuyên dụng khi đi bộ ngoài trời.</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="hkd2" data-photo-title="Ngày 2 · Thị trấn cảng lãng mạn Otaru" data-photo-caption="Kênh đào Otaru với những nhà kho gạch đỏ cổ kính phủ tuyết trắng xóa.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 2 · Thị trấn cảng lãng mạn Otaru"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">02<span class="day-kanji-num">二日</span></div>
+              <div class="day-body">
+                <h3>Otaru — Kênh đào ký ức, Thủy tinh &amp; Hộp âm nhạc cổ điển</h3>
+                <p>Đi tàu ven biển 35 phút tới Otaru. Tản bộ bên bờ kênh đào Otaru nổi tiếng với dãy nhà kho gạch đỏ. Thăm bảo tàng hộp nhạc Otaru Music Box Museum nghe những giai điệu cổ kính, xưởng chế tác thủy tinh Kitaichi Glass và thưởng thức bánh phô mai LeTAO nức tiếng.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🍰</span><span><strong>Món nên thử:</strong> Bánh Double Fromage LeTAO tan chảy &amp; bát cơm hải sản Kaisen-don tươi rói tại chợ Sankaku.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Kênh đào Otaru lên đèn lung linh nhất từ 17h00 đến 19h00 khi đèn dầu khí đốt được thắp sáng.</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="hkd3" data-photo-title="Ngày 3 · Furano — Thảm hoa &amp; Hồ xanh Biei" data-photo-caption="Cánh đồng hoa oải hương ở Furano nhuộm tím cả sườn đồi vào giữa mùa hè Hokkaido.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 3 · Furano — Thảm hoa &amp; Hồ xanh Biei"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">03<span class="day-kanji-num">三日</span></div>
+              <div class="day-body">
+                <h3>Furano &amp; Biei — Kỳ quan sắc màu thiên nhiên</h3>
+                <p>Khám phá nông trang Farm Tomita nổi tiếng thế giới với những dải hoa 7 màu trải dài như cầu vồng. Chiều chiêm ngưỡng Hồ xanh ngọc bích Shirogane Blue Pond với những thân cây bạch dương khô đứng trơ trọi giữa làn nước huyền ảo kỳ bí.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🍈</span><span><strong>Món nên thử:</strong> Dưa lưới Yubari ngọt lịm và kem ốc quế oải hương tím ngát.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Mùa đông hồ Biei đóng băng và được chiếu sáng nghệ thuật ban đêm đẹp tựa truyện cổ tích.</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="hkd4" data-photo-title="Ngày 4 · Noboribetsu — Thung lũng địa ngục Onsen" data-photo-caption="Bồn onsen ngoài trời xây bằng đá, nhìn ra khu vườn chuyển màu mùa thu.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 4 · Noboribetsu — Thung lũng địa ngục Onsen"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">04<span class="day-kanji-num">四日</span></div>
+              <div class="day-body">
+                <h3>Noboribetsu — Thung lũng Jigokudani &amp; Thánh địa Onsen</h3>
+                <p>Di chuyển xuống phía nam tới thị trấn suối khoáng nổi tiếng nhất Hokkaido. Đi dạo qua sàn gỗ của Thung lũng địa ngục Jigokudani ngắm các miệng phun hơi nước nóng và dòng sông lưu huỳnh sôi sục. Tối nghỉ ngơi tại ryokan với bồn ngâm khoáng nóng lộ thiên (rotenburo).</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🦀</span><span><strong>Món nên thử:</strong> Cua hoàng đế King Crab &amp; Lẩu hải sản tuyết Kani Nabe trứ danh.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Nước khoáng Noboribetsu có chứa đến 9 loại khoáng chất khác nhau, cực tốt cho làn da và xương khớp.</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="hkd5" data-photo-title="Ngày 5 · Hồ Toya — Núi lửa Usu" data-photo-caption="Khung cảnh non nước hữu tình của hồ miệng núi lửa Toya.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 5 · Hồ Toya — Núi lửa Usu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">05<span class="day-kanji-num">五日</span></div>
+              <div class="day-body">
+                <h3>Hồ Toya &amp; Núi lửa Usu — Cảnh quan địa chất hùng vĩ</h3>
+                <p>Thưởng ngoạn cảnh sắc hồ Toya — hồ nước không bao giờ đóng băng giữa mùa đông băng giá. Đi cáp treo lên đỉnh núi Usu ngắm nhìn miệng núi lửa đang bốc khói và toàn cảnh Thái Bình Dương từ trên cao. Buổi tối ngắm pháo hoa phản chiếu trên mặt hồ (từ tháng 4 đến tháng 10).</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🥩</span><span><strong>Món nên thử:</strong> Thịt nướng Thành Cát Tư Hãn (Jingisukan - thịt cừu nướng chảo vòm truyền thống Hokkaido).</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Ghé thăm làng gấu Showa Shinzan Bear Ranch dưới chân núi lửa.</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="hkd6" data-photo-title="Ngày 6 · Sapporo — Chợ hải sản &amp; Trở về" data-photo-caption="Thành phố Sapporo nhìn từ trên cao trước khi ra sân bay về nước.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 6 · Sapporo — Chợ hải sản &amp; Trở về"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">06<span class="day-kanji-num">結び</span></div>
+              <div class="day-body">
+                <h3>Chợ hải sản Nijo &amp; Sân bay New Chitose</h3>
+                <p>Ăn sáng tại chợ Nijo với món cơm nhum biển (uni) và trứng cá hồi (ikura). Thăm xưởng socola Shiroi Koibito Park tựa tòa lâu đài cổ tích châu Âu. Di chuyển ra sân bay New Chitose — sân bay thú vị nhất Nhật Bản với công viên Doraemon và rạp chiếu phim — đón chuyến bay về nước.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🍪</span><span><strong>Món nên thử:</strong> Bánh quy socola kẹp lưỡi mèo Shiroi Koibito nức tiếng làm quà.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Dành ít nhất 3 tiếng ở sân bay New Chitose vì khu mua sắm và ẩm thực tại đây cực kỳ phong phú.</span></div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- ================= LỘ TRÌNH 3: SHIRAKAWA-GO & ALPS ================= -->
+        <div class="itinerary-panel" id="panel-route-3" role="tabpanel" aria-labelledby="tab-route-3" hidden>
+          <div class="route-hero-card">
+            <div class="route-header">
+              <div class="route-title-wrap">
+                <h3>Con Đường Di Sản &amp; Làng Cổ Tích Shirakawa-go <span lang="ja">飛騨高山・白川郷</span></h3>
+                <p>Nagoya ➔ Phố cổ thời Edo Takayama ➔ Làng mái tranh Shirakawa-go ➔ Thành cổ Kanazawa</p>
+              </div>
+              <div class="route-badges">
+                <span class="route-pill">🏮 Cổ tích thời Edo</span>
+                <span class="route-pill">🥩 Bò Hida thượng hạng</span>
+              </div>
+            </div>
+
+            <dl class="route-meta-grid">
+              <div class="route-meta-box"><dt>Thời lượng</dt><dd>5 ngày 4 đêm</dd></div>
+              <div class="route-meta-box"><dt>Mùa lý tưởng</dt><dd>Mùa đông (thắp đèn tuyết tháng 1-2) hoặc Mùa thu (tháng 10-11)</dd></div>
+              <div class="route-meta-box"><dt>Di chuyển chính</dt><dd>Tàu JR Hida Wide View &amp; Xe buýt cao tốc Nohi Bus</dd></div>
+              <div class="route-meta-box"><dt>Ngân sách ước tính</dt><dd>28 - 40 triệu VNĐ / người</dd></div>
+            </dl>
+
+            <div class="route-highlights-box">
+              <h4>Điểm nhấn không thể bỏ lỡ</h4>
+              <ul>
+                <li>Ngắm nhìn ngôi làng cổ tích Shirakawa-go với mái nhà tranh Gassho-zukuri hình đôi bàn tay cầu nguyện</li>
+                <li>Tản bộ trên những con phố thời phong kiến Edo được bảo tồn nguyên vẹn tại Sanmachi Suji Takayama</li>
+                <li>Thưởng thức thịt bò Hida nướng trên lá mộc lan thơm lừng với sốt tương miso (Hoba Miso)</li>
+                <li>Chiêm ngưỡng Kenroku-en tại Kanazawa — một trong ba khu vườn truyền thống đẹp nhất Nhật Bản</li>
+              </ul>
+            </div>
           </div>
-        </li>
-        <li class="day reveal" style="--i:3" data-photo="day4" data-photo-title="Ngày 4 · Kyoto — Fushimi Inari &amp; Gion" data-photo-caption="Chùa Kiyomizu-dera giữa mùa lá đỏ, nhìn từ sân chùa xuống thành phố Kyoto.">
-          <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 4 · Kyoto — Fushimi Inari &amp; Gion"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
-          <div class="day-badge" aria-hidden="true">04</div>
-          <div class="day-body">
-            <h3>Kyoto — Fushimi Inari &amp; Gion</h3>
-            <p>Shinkansen tới Kyoto. Đi bộ qua hàng nghìn cổng torii đỏ của Fushimi Inari, chùa Kiyomizu-dera và phố cổ Gion.</p>
+
+          <ol class="timeline">
+            <li class="day" data-photo="alps1" data-photo-title="Ngày 1 · Nagoya đến Takayama" data-photo-caption="Chuyến tàu Hida Wide View len lỏi qua thung lũng sông và núi rừng Hida tuyệt đẹp.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 1 · Nagoya đến Takayama"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">01<span class="day-kanji-num">初日</span></div>
+              <div class="day-body">
+                <h3>Nagoya ➔ Thị trấn cổ Takayama giữa rặng núi tuyết Alps</h3>
+                <p>Từ Nagoya đón chuyến tàu ngắm cảnh Hida Wide View băng qua những khe núi ngoạn mục đến Takayama. Buổi chiều tản bộ qua khu phố cổ Sanmachi Suji với những ngôi nhà gỗ màu nâu sẫm, những xưởng ủ rượu Sake truyền thống treo quả cầu lá thông Sugidama trước cửa.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🥩</span><span><strong>Món nên thử:</strong> Sushi bò Hida nướng tái rưới nước sốt ngọt trên đĩa bánh gạo senbei.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Mua một chiếc chén gốm nhỏ tại xưởng rượu để nếm thử hơn chục loại sake bản địa thơm nồng.</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="alps2" data-photo-title="Ngày 2 · Làng cổ tích Shirakawa-go" data-photo-caption="Những ngôi nhà mái tranh dốc đứng Gassho-zukuri giữa ngôi làng cổ tích Shirakawa-go phủ đầy tuyết.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 2 · Làng cổ tích Shirakawa-go"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">02<span class="day-kanji-num">二日</span></div>
+              <div class="day-body">
+                <h3>Shirakawa-go — Di sản thế giới giữa thung lũng tuyết trắng</h3>
+                <p>Đi xe buýt Nohi 50 phút đến làng cổ Shirakawa-go (Di sản UNESCO). Chiêm ngưỡng những ngôi nhà Gassho-zukuri mái tranh dày đến 1 mét đứng vững qua hàng trăm mùa tuyết rơi. Lên đài quan sát Shiroyama phóng tầm mắt ngắm trọn vẹn ngôi làng như bước ra từ trang sách cổ tích.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🍲</span><span><strong>Món nên thử:</strong> Bò Hida nướng lá mộc lan Hoba Miso ăn cùng cơm trắng dẻo thơm.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Đặt trước vé xe buýt Nohi Bus tuyến Takayama - Shirakawa-go ít nhất 1 tháng vì rất nhanh cháy vé.</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="alps3" data-photo-title="Ngày 3 · Thành cổ Kanazawa &amp; Vườn Kenroku-en" data-photo-caption="Vườn Kenroku-en tại Kanazawa — đỉnh cao của nghệ thuật làm vườn truyền thống Nhật Bản.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 3 · Thành cổ Kanazawa &amp; Vườn Kenroku-en"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">03<span class="day-kanji-num">三日</span></div>
+              <div class="day-body">
+                <h3>Kanazawa — Vùng đất của Vàng ròng và Nghệ thuật truyền thống</h3>
+                <p>Xe buýt tiếp tục đưa bạn đến Kanazawa bên bờ biển Nhật Bản. Tham quan Vườn Kenroku-en với kỹ thuật chống tuyết cho cây thông độc đáo Yukitsuri. Khám phá Thành cổ Kanazawa và khu phố Geisha cổ Higashi Chaya với những quán trà gỗ tao nhã.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🍦</span><span><strong>Món nên thử:</strong> Kem dát lá vàng ròng Kanazawa Kinpaku Softcream sang trọng và bắt mắt.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Kanazawa sản xuất 99% lượng vàng lá của Nhật Bản, đừng quên thử trải nghiệm tự tay dát vàng lên đồ lưu niệm.</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="alps4" data-photo-title="Ngày 4 · Chợ Omicho &amp; Phố võ sĩ Samurai Nagamachi" data-photo-caption="Hải sản tươi sống của vùng biển Nhật Bản tại chợ cổ Omicho Kanazawa.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 4 · Chợ Omicho &amp; Phố võ sĩ Samurai Nagamachi"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">04<span class="day-kanji-num">四日</span></div>
+              <div class="day-body">
+                <h3>Kanazawa — Làng Samurai Nagamachi &amp; Chợ hải sản Omicho</h3>
+                <p>Buổi sáng lạc vào chợ hải sản 300 năm tuổi Omicho thưởng thức cua tuyết tươi sống. Chiều dạo bước trong khu phố Samurai cổ Nagamachi với những bức tường đất phủ rơm và dinh thự của gia tộc Nomura với khu vườn thiền thanh tịnh tuyệt mỹ.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🦀</span><span><strong>Món nên thử:</strong> Cua tuyết Kano-gani hoặc bát cơm hải sản tươi lừng danh chợ Omicho.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Ghé thăm Bảo tàng Nghệ thuật Đương đại Thế kỷ 21 Kanazawa để chiêm ngưỡng tác phẩm "The Swimming Pool" nổi tiếng.</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="alps5" data-photo-title="Ngày 5 · Shinkansen về Nagoya / Tokyo" data-photo-caption="Tàu Shinkansen Hokuriku nối liền Kanazawa và các thành phố lớn với vận tốc 260km/h.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 5 · Shinkansen về Nagoya / Tokyo"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">05<span class="day-kanji-num">結び</span></div>
+              <div class="day-body">
+                <h3>Kanazawa ➔ Nagoya / Tokyo — Mua sắm &amp; Kết thúc hành trình</h3>
+                <p>Đón tàu Shinkansen Hokuriku về Tokyo hoặc tàu Shirasagi về Nagoya. Mua sắm bánh wagashi truyền thống và đồ gốm sứ Kutani tráng men tinh xảo trước khi ra sân bay kết thúc chuyến hành trình xuyên qua trái tim cổ kính của nước Nhật.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🍡</span><span><strong>Món nên thử:</strong> Bánh Wagashi Kanazawa thanh nhã dùng kèm trà xanh matcha.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Ga Kanazawa với cổng gỗ khổng lồ Tsuzumi-mon là một trong những ga tàu đẹp nhất thế giới, nhớ chụp một tấm ảnh kỷ niệm!</span></div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- ================= LỘ TRÌNH 4: ONSEN & NÚI LỬA KYUSHU ================= -->
+        <div class="itinerary-panel" id="panel-route-4" role="tabpanel" aria-labelledby="tab-route-4" hidden>
+          <div class="route-hero-card">
+            <div class="route-header">
+              <div class="route-title-wrap">
+                <h3>Thiên Đường Onsen &amp; Núi Lửa Kyushu Huyền Bí <span lang="ja">九州温泉巡り</span></h3>
+                <p>Fukuoka Hakata ➔ Suối khoáng nóng Beppu ➔ Làng thần tiên Yufuin ➔ Lâu đài Kumamoto &amp; Núi lửa Aso</p>
+              </div>
+              <div class="route-badges">
+                <span class="route-pill">♨️ Suối khoáng thiên nhiên</span>
+                <span class="route-pill">🌋 Núi lửa hoạt động</span>
+              </div>
+            </div>
+
+            <dl class="route-meta-grid">
+              <div class="route-meta-box"><dt>Thời lượng</dt><dd>5 ngày 4 đêm</dd></div>
+              <div class="route-meta-box"><dt>Mùa lý tưởng</dt><dd>Mùa thu &amp; Mùa đông (tháng 10 đến tháng 3 tắm onsen cực đã)</dd></div>
+              <div class="route-meta-box"><dt>Di chuyển chính</dt><dd>JR Kyushu Rail Pass &amp; Tàu du lịch Yufuin no Mori</dd></div>
+              <div class="route-meta-box"><dt>Ngân sách ước tính</dt><dd>28 - 38 triệu VNĐ / người</dd></div>
+            </dl>
+
+            <div class="route-highlights-box">
+              <h4>Điểm nhấn không thể bỏ lỡ</h4>
+              <ul>
+                <li>Chiêm ngưỡng "7 tầng địa ngục" suối khoáng sôi sục Jigoku Meguri đủ sắc màu tại Beppu</li>
+                <li>Dạo quanh hồ Kinrin huyền ảo và các tiệm đồ thủ công xinh xắn tại thị trấn cổ Yufuin</li>
+                <li>Ngắm nhìn miệng núi lửa khổng lồ đang bốc khói Mount Aso — một trong những miệng núi lửa lớn nhất hành tinh</li>
+                <li>Thưởng thức mì Tonkotsu Ramen chính gốc tại các quầy ăn đêm vỉa hè Yatai ven sông Nakasu Fukuoka</li>
+              </ul>
+            </div>
           </div>
-        </li>
-        <li class="day reveal" style="--i:4" data-photo="day5" data-photo-title="Ngày 5 · Kyoto — Arashiyama &amp; trà đạo" data-photo-caption="Con đường tre Arashiyama, hai bên là tre cao vút che kín ánh nắng.">
-          <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 5 · Kyoto — Arashiyama &amp; trà đạo"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
-          <div class="day-badge" aria-hidden="true">05</div>
-          <div class="day-body">
-            <h3>Kyoto — Arashiyama &amp; trà đạo</h3>
-            <p>Rừng tre Arashiyama sáng sớm, chùa Kinkaku-ji ánh vàng, buổi chiều tham gia một lớp trà đạo.</p>
+
+          <ol class="timeline">
+            <li class="day" data-photo="kyu1" data-photo-title="Ngày 1 · Fukuoka — Thủ phủ ẩm thực Kyushu" data-photo-caption="Khung cảnh núi lửa và thiên nhiên trù phú của hòn đảo phía nam Kyushu.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 1 · Fukuoka — Thủ phủ ẩm thực Kyushu"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">01<span class="day-kanji-num">初日</span></div>
+              <div class="day-body">
+                <h3>Fukuoka (Hakata) — Trải nghiệm ẩm thực đêm Yatai ven sông Nakasu</h3>
+                <p>Hạ cánh tại sân bay Fukuoka (chỉ cách trung tâm 10 phút đi tàu điện ngầm). Chiều viếng đền cổ Kushida và khu mua sắm Canal City Hakata xem nhạc nước. Tối đến khu phố bờ sông Nakasu ngồi ăn mì tại các quầy xe lưu động Yatai truyền thống dưới ánh đèn lồng đỏ ấm cúng.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🍜</span><span><strong>Món nên thử:</strong> Hakata Tonkotsu Ramen với nước dùng xương heo hầm đặc sánh béo ngậy và há cảo một miếng Hitokuchi Gyoza.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Quầy ăn Yatai mở cửa từ 18h30, không gian nhỏ nên không ngồi quá lâu sau khi ăn xong để nhường chỗ cho khách sau.</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="kyu2" data-photo-title="Ngày 2 · Beppu — 7 tầng địa ngục suối khoáng" data-photo-caption="Hơi nước khoáng nóng bốc lên ngút ngàn khắp thị trấn Beppu nhìn từ trên cao.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 2 · Beppu — 7 tầng địa ngục suối khoáng"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">02<span class="day-kanji-num">二日</span></div>
+              <div class="day-body">
+                <h3>Beppu — Kỳ quan "Địa ngục suối khoáng" Jigoku &amp; Tắm cát nóng</h3>
+                <p>Đi tàu tốc hành Sonic đến Beppu — nơi có sản lượng nước khoáng nóng lớn thứ hai thế giới. Tham quan 7 "địa ngục" suối khoáng độc nhất vô nhị: Umi Jigoku nước xanh ngọc bích như biển, Chinoike Jigoku nước đỏ rực như máu. Buổi chiều trải nghiệm vùi mình trong cát khoáng nóng tự nhiên bên bờ biển Beppu Kaihin Sunayu.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🍮</span><span><strong>Món nên thử:</strong> Jigoku Mushi (hải sản và rau củ hấp chín bằng chính hơi nước khoáng tự nhiên) &amp; Bánh flan suối khoáng.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Mua vé liên tuyến Jigoku Meguri Pass để tham quan trọn gói cả 7 địa ngục suối khoáng với giá ưu đãi.</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="kyu3" data-photo-title="Ngày 3 · Thị trấn cổ tích Yufuin" data-photo-caption="Con đường nhỏ dẫn vào hồ Kinrin tại thị trấn Yufuin trong sương sớm mùa thu.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 3 · Thị trấn cổ tích Yufuin"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">03<span class="day-kanji-num">三日</span></div>
+              <div class="day-body">
+                <h3>Yufuin — Thị trấn nghỉ dưỡng thơ mộng &amp; Hồ sương mù Kinrin</h3>
+                <p>Trải nghiệm chuyến tàu du lịch cổ điển xanh lá Yufuin no Mori đến Yufuin. Dạo phố Yunotsubo Kaido với các tiệm trà, đồ gốm và làng Yufuin Floral Village phong cách truyện tranh châu Âu. Điểm nhấn là hồ Kinrin — nơi nước suối nóng ngầm hòa vào nước lạnh tạo nên màn sương khói huyền ảo bao phủ mặt hồ mỗi sáng.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🥩</span><span><strong>Món nên thử:</strong> Bò Bungo Wagyu thượng hạng nướng đá &amp; Bánh cuộn B-Speak Roll Cake mềm mịn như mây.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Thức dậy vào khoảng 6h30 sáng ra hồ Kinrin để chiêm ngưỡng biển sương mù bồng bềnh đẹp mê hồn.</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="kyu4" data-photo-title="Ngày 4 · Núi lửa Aso &amp; Thành cổ Kumamoto" data-photo-caption="Khung cảnh miệng núi lửa Mount Aso hùng vĩ giữa cao nguyên xanh ngắt của Kyushu.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 4 · Núi lửa Aso &amp; Thành cổ Kumamoto"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">04<span class="day-kanji-num">四日</span></div>
+              <div class="day-body">
+                <h3>Miệng núi lửa Aso hùng vĩ &amp; Lâu đài kiên cố Kumamoto</h3>
+                <p>Khám phá cao nguyên Kusasenri và miệng núi lửa khổng lồ Mount Aso Nakadake vẫn đang hoạt động nhả khói trắng lên nền trời xanh. Chiều di chuyển về thành phố Kumamoto chiêm ngưỡng Lâu đài Kumamoto — một trong ba tòa thành kiên cố và lộng lẫy bậc nhất xứ Phù Tang với những bức tường đá dốc đứng Musha-gaeshi.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🍜</span><span><strong>Món nên thử:</strong> Kumamoto Ramen với tỏi phi đen Mayu thơm nức và bò đỏ Akaushi nướng.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Kiểm tra mức độ cảnh báo khí gas của miệng núi lửa Aso trên trang web chính thức trước khi lên đỉnh.</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="kyu5" data-photo-title="Ngày 5 · Dazaifu Tenmangu &amp; Trở về" data-photo-caption="Đền Dazaifu Tenmangu cổ kính tại Fukuoka — nơi cầu đỗ đạt và trí tuệ nổi tiếng Nhật Bản.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 5 · Dazaifu Tenmangu &amp; Trở về"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">05<span class="day-kanji-num">結び</span></div>
+              <div class="day-body">
+                <h3>Đền ngàn hoa Dazaifu Tenmangu ➔ Sân bay Fukuoka</h3>
+                <p>Buổi sáng viếng ngôi đền thiêng Dazaifu Tenmangu thờ thần học vấn Sugawara no Michizane, đi qua cây cầu đỏ Taikobashi bắc qua hồ hoa súng. Mua sắm trứng cá tuyết cay Mentaiko đặc sản Hakata trước khi ra sân bay Fukuoka trở về.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🥮</span><span><strong>Món nên thử:</strong> Bánh nếp hoa mơ nướng Umegae Mochi giòn ngoài dẻo trong tại con dốc đền Dazaifu.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Ghé thăm quán cà phê Starbucks Dazaifu được kiến trúc sư huyền thoại Kengo Kuma thiết kế đan kết từ 2.000 thanh gỗ tuyệt đẹp.</span></div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- ================= LỘ TRÌNH 5: OTAKU & TOKYO POP ================= -->
+        <div class="itinerary-panel" id="panel-route-5" role="tabpanel" aria-labelledby="tab-route-5" hidden>
+          <div class="route-hero-card">
+            <div class="route-header">
+              <div class="route-title-wrap">
+                <h3>Tokyo Otaku, Pop Culture &amp; Tương Lai Siêu Tốc <span lang="ja">アニメと未来都市東京</span></h3>
+                <p>Akihabara ➔ Nakano Broadway &amp; Ikebukuro ➔ Bảo tàng Ghibli ➔ Shibuya Sky &amp; teamLab Odaiba</p>
+              </div>
+              <div class="route-badges">
+                <span class="route-pill">⚡ Anime &amp; Manga Thánh địa</span>
+                <span class="route-pill">🤖 Công nghệ số tương lai</span>
+              </div>
+            </div>
+
+            <dl class="route-meta-grid">
+              <div class="route-meta-box"><dt>Thời lượng</dt><dd>4 ngày 3 đêm</dd></div>
+              <div class="route-meta-box"><dt>Mùa lý tưởng</dt><dd>Quanh năm (mùa hè có hội chợ truyện tranh Comic Market Comiket)</dd></div>
+              <div class="route-meta-box"><dt>Di chuyển chính</dt><dd>Tokyo Subway 72-Hour Ticket &amp; JR Yamanote Line</dd></div>
+              <div class="route-meta-box"><dt>Ngân sách ước tính</dt><dd>20 - 32 triệu VNĐ / người</dd></div>
+            </dl>
+
+            <div class="route-highlights-box">
+              <h4>Điểm nhấn không thể bỏ lỡ</h4>
+              <ul>
+                <li>"Săn" mô hình nhân vật figure, ấn phẩm truyện tranh hiếm và trải nghiệm Maid Cafe tại Akihabara</li>
+                <li>Bước vào thế giới cổ tích nhiệm màu của Hayao Miyazaki tại Bảo tàng Ghibli Mitaka</li>
+                <li>Lạc vào không gian thị giác ánh sáng kỹ thuật số siêu thực teamLab Planets</li>
+                <li>Ngắm robot Gundam Unicorn khổng lồ tỷ lệ 1:1 biến hình đổi màu tại Odaiba</li>
+              </ul>
+            </div>
           </div>
-        </li>
-        <li class="day reveal" style="--i:5" data-photo="day6" data-photo-title="Ngày 6 · Nara &amp; Osaka" data-photo-caption="Những chú nai đi lại giữa sân chùa Tōdai-ji ở Nara.">
-          <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 6 · Nara &amp; Osaka"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
-          <div class="day-badge" aria-hidden="true">06</div>
-          <div class="day-body">
-            <h3>Nara &amp; Osaka</h3>
-            <p>Đền Todai-ji và những chú nai ở công viên Nara, rồi di chuyển đến Osaka, dạo phố ẩm thực Dotonbori.</p>
+
+          <ol class="timeline">
+            <li class="day" data-photo="otk1" data-photo-title="Ngày 1 · Thánh địa Otaku Akihabara" data-photo-caption="Khu phố Akihabara rực rỡ biển hiệu anime, mô hình và các cửa hàng điện tử đa tầng.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 1 · Thánh địa Otaku Akihabara"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">01<span class="day-kanji-num">初日</span></div>
+              <div class="day-body">
+                <h3>Thánh địa Akihabara — Thiên đường Mô hình, Trò chơi điện tử &amp; Maid Cafe</h3>
+                <p>Hạ cánh Tokyo, di chuyển thẳng về khu Akihabara. Khám phá các tòa nhà 8-10 tầng ngập tràn figure như Radio Kaikan, Mandarake Complex, Animate và Kotobukiya. Chiều thử máy gắp gối Gashapon khổng lồ và trải nghiệm quán cà phê hầu gái Maid Cafe vui nhộn. Tối ghé trung tâm game đa tầng Sega GiGO chơi game nhịp điệu Taiko.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🍛</span><span><strong>Món nên thử:</strong> Cơm cà ri bò Katsu Curry thơm lừng đặc trưng của giới Otaku Akiba.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Hãy so sánh giá mô hình ở các tầng trên cao, thường rẻ hơn so với các kệ ngay cửa ra vào tầng trệt.</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="otk2" data-photo-title="Ngày 2 · Bảo tàng Ghibli &amp; Nakano Broadway" data-photo-caption="Thế giới hoạt hình ấm áp và giàu trí tưởng tượng của Studio Ghibli tại Mitaka.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 2 · Bảo tàng Ghibli &amp; Nakano Broadway"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">02<span class="day-kanji-num">二日</span></div>
+              <div class="day-body">
+                <h3>Bảo tàng Ghibli Mitaka &amp; "Mê cung cổ điển" Nakano Broadway</h3>
+                <p>Buổi sáng bắt tàu đến Mitaka bước vào thế giới hoạt hình Totoro, Spirited Away tại Ghibli Museum với bản vẽ tay độc quyền của đạo diễn Hayao Miyazaki. Chiều về Nakano Broadway — "mê cung" đồ chơi cổ điển, truyện tranh vintage và thẻ bài Pokemon hiếm có từ thập niên 80-90. Chiều tối dạo công viên Inokashira ngắm hồ nước êm đềm.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🍦</span><span><strong>Món nên thử:</strong> Kem ốc quế 8 tầng khổng lồ Daily Chico dưới tầng hầm Nakano Broadway.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Vé Bảo tàng Ghibli bắt buộc phải đặt trước vào ngày 10 của tháng trước trên trang Lawson Ticket.</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="otk3" data-photo-title="Ngày 3 · Shibuya, Harajuku &amp; Ikebukuro" data-photo-caption="Giao lộ Shibuya huyền thoại rực rỡ biển quảng cáo khổng lồ và dòng người tấp nập.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 3 · Shibuya, Harajuku &amp; Ikebukuro"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">03<span class="day-kanji-num">三日</span></div>
+              <div class="day-body">
+                <h3>Thời trang đường phố Harajuku, Nintendo Store &amp; Trung tâm Pokemon</h3>
+                <p>Khám phá văn hóa Cosplay và thời trang Harajuku tại phố Takeshita. Ghé thăm Shibuya PARCO với cửa hàng Nintendo Tokyo chính hãng và tượng Mewtwo ngâm trong bể dung dịch sống động. Chiều di chuyển lên Ikebukuro ghé thăm Sunshine City — nơi có Trung tâm Pokemon lớn nhất Nhật Bản Pokemon Center Mega Tokyo.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🥞</span><span><strong>Món nên thử:</strong> Bánh Crepe cuộn hoa quả kem tươi Harajuku &amp; bánh ngọt hình Pikachu tại Pokemon Cafe.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Lên tầng thượng Shibuya PARCO có khu vườn ngoài trời view ngắm thành phố rất đẹp và hoàn toàn miễn phí.</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="otk4" data-photo-title="Ngày 4 · teamLab &amp; Robot Gundam Odaiba" data-photo-caption="Bức tượng người máy Gundam khổng lồ đứng sừng sững bên vịnh Tokyo Odaiba.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 4 · teamLab &amp; Robot Gundam Odaiba"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">04<span class="day-kanji-num">結び</span></div>
+              <div class="day-body">
+                <h3>Bảo tàng kỹ thuật số teamLab Planets &amp; Vịnh tương lai Odaiba</h3>
+                <p>Đi chân trần bước vào không gian nghệ thuật ánh sáng và làn nước vô cực tại bảo tàng kỹ thuật số teamLab Planets Toyosu. Chiều bắt tàu không người lái Yurikamome ngắm cầu Rainbow Bridge ra đảo nhân tạo Odaiba, chiêm ngưỡng màn biến hình phát sáng của tượng Robot Gundam Unicorn cao gần 20 mét rồi ra sân bay.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🥩</span><span><strong>Món nên thử:</strong> Bò bít tết Hamburg nướng phô mai béo ngậy tại khu ẩm thực DiverCity Odaiba.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Mặc quần có thể xắn qua đầu gối khi đi teamLab vì bạn sẽ lội qua làn nước thật có cá chép ảo bơi lội.</span></div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- ================= LỘ TRÌNH 6: KUMANO KODO & KOYASAN ================= -->
+        <div class="itinerary-panel" id="panel-route-6" role="tabpanel" aria-labelledby="tab-route-6" hidden>
+          <div class="route-hero-card">
+            <div class="route-header">
+              <div class="route-title-wrap">
+                <h3>Hành Hương Linh Thiêng Koyasan &amp; Rừng Cổ Kumano Kodo <span lang="ja">熊野古道・高野山</span></h3>
+                <p>Osaka ➔ Núi thiêng Koyasan (ngủ chùa Shukubo) ➔ Đường mòn Kumano Kodo ➔ Đền Kumano Nachi Taisha &amp; Thác Nachi</p>
+              </div>
+              <div class="route-badges">
+                <span class="route-pill">⛩️ Di sản thế giới UNESCO</span>
+                <span class="route-pill">🧘 Thiền tịnh &amp; Ẩm thực chay</span>
+              </div>
+            </div>
+
+            <dl class="route-meta-grid">
+              <div class="route-meta-box"><dt>Thời lượng</dt><dd>5 ngày 4 đêm</dd></div>
+              <div class="route-meta-box"><dt>Mùa lý tưởng</dt><dd>Mùa xuân (tháng 4-5) &amp; Mùa thu (tháng 10-11 khí hậu mát mẻ trekking)</dd></div>
+              <div class="route-meta-box"><dt>Di chuyển chính</dt><dd>Tàu Nankai Koya Line, Cáp treo Koyasan &amp; Xe buýt Kumano Kotsu</dd></div>
+              <div class="route-meta-box"><dt>Ngân sách ước tính</dt><dd>28 - 42 triệu VNĐ / người</dd></div>
+            </dl>
+
+            <div class="route-highlights-box">
+              <h4>Điểm nhấn không thể bỏ lỡ</h4>
+              <ul>
+                <li>Trải nghiệm ngủ đêm tại tự viện cổ Phật giáo Chân Ngôn Tông (Shukubo) trên đỉnh núi thiêng Koyasan</li>
+                <li>Thưởng thức bữa cơm chay thiền môn Shojin Ryori tinh xảo và tham gia buổi tụng kinh thiền định sớm mai</li>
+                <li>Sải bước trên con đường đá rêu phong Kumano Kodo hàng nghìn năm tuổi rợp bóng cây tuyết tùng cổ thụ</li>
+                <li>Ngắm khung cảnh ngôi chùa 3 tầng Seiganto-ji soi bóng bên Thác nước linh thiêng Nachi cao nhất Nhật Bản</li>
+              </ul>
+            </div>
           </div>
-        </li>
-        <li class="day reveal" style="--i:6" data-photo="day7" data-photo-title="Ngày 7 · Osaka — mua sắm và về nước" data-photo-caption="Phố Dotonbori bên kênh đào, bảng hiệu và đèn lồng rực rỡ về đêm.">
-          <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 7 · Osaka — mua sắm và về nước"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
-          <div class="day-badge" aria-hidden="true">07</div>
-          <div class="day-body">
-            <h3>Osaka — mua sắm và về nước</h3>
-            <p>Lâu đài Osaka, mua sắm ở Shinsaibashi, ăn takoyaki lần cuối rồi ra sân bay Kansai.</p>
+
+          <ol class="timeline">
+            <li class="day" data-photo="kmn1" data-photo-title="Ngày 1 · Lên núi thiêng Koyasan" data-photo-caption="Cổng vào rừng bách Okunoin ngút ngàn sương mù trên đỉnh núi thiêng Koyasan.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 1 · Lên núi thiêng Koyasan"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">01<span class="day-kanji-num">初日</span></div>
+              <div class="day-body">
+                <h3>Núi thiêng Koyasan — Trải nghiệm ngủ đêm tại Chùa cổ (Shukubo)</h3>
+                <p>Từ Osaka bắt tàu Nankai Koya và cáp treo lên đỉnh Koyasan ở độ cao gần 900m — thánh địa Phật giáo do Đại sư Hoằng Pháp Kobo Daishi khai sơn năm 816. Nhận phòng chiếu tatami tại tự viện cổ Shukubo, ngắm nhìn khu vườn đá thiền định tĩnh lặng và dùng bữa tối thanh đạm.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🍱</span><span><strong>Món nên thử:</strong> Ẩm thực chay Phật giáo Shojin Ryori với đậu phụ mè Goma-dofu béo bùi thủ công.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Nhiệt độ trên núi Koyasan luôn thấp hơn đồng bằng 5-8 độ C, hãy mang thêm áo ấm mỏng.</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="kmn2" data-photo-title="Ngày 2 · Rừng mộ cổ Okunoin" data-photo-caption="Hơn 200.000 ngôi bia mộ đá rêu phong dưới tán tuyết tùng ngàn năm tại Okunoin.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 2 · Rừng mộ cổ Okunoin"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">02<span class="day-kanji-num">二日</span></div>
+              <div class="day-body">
+                <h3>Thiền định buổi sáng &amp; Con đường huyền bí Okunoin</h3>
+                <p>Thức dậy lúc 6h sáng tham dự buổi khóa lễ tụng kinh và nghi thức đốt lửa hộ ma Goma cầu an cùng các nhà sư. Sau đó đi bộ qua nghĩa trang cổ tích Okunoin với hơn 200.000 ngôi mộ rêu phong ẩn dưới bóng những cây tuyết tùng khổng lồ ngàn năm tuổi dẫn đến lăng Kobo Daishi.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🍵</span><span><strong>Món nên thử:</strong> Bánh hạt dẻ Koya Kuri Manju &amp; trà thảo mộc núi thiêng.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Khi qua cầu Gobyo-bashi dẫn vào lăng mộ, cấm quay phim chụp ảnh và cần cúi chào để thể hiện lòng tôn kính.</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="kmn3" data-photo-title="Ngày 3 · Đại đền Kumano Hongu Taisha" data-photo-caption="Cổng Torii bằng thép đen Oyunohara khổng lồ cao nhất thế giới giữa đồng lúa Kumano.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 3 · Đại đền Kumano Hongu Taisha"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">03<span class="day-kanji-num">三日</span></div>
+              <div class="day-body">
+                <h3>Cung đường di sản thế giới Kumano Kodo ➔ Đền Hongu Taisha</h3>
+                <p>Xe buýt đưa bạn vào bán đảo Kii linh thiêng. Trekking đoạn đường mòn lát đá cổ Nakahechi xuyên qua rừng bách nguyên sinh. Đến viếng Đại đền Kumano Hongu Taisha và cổng Torii Oyunohara khổng lồ cao gần 34 mét đứng sừng sững giữa cánh đồng lúa thanh bình.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🍙</span><span><strong>Món nên thử:</strong> Cơm nắm Mehari-zushi bọc lá mù tạt ngâm chua ngọt độc đáo của người leo núi.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Chuẩn bị gậy leo núi và giày đi bộ chống nước vì các bậc đá rêu phong có thể trơn trượt sau cơn mưa.</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="kmn4" data-photo-title="Ngày 4 · Thác Nachi &amp; Chùa Seiganto-ji" data-photo-caption="Khung cảnh ngôi chùa cổ 3 tầng Seiganto-ji bên cạnh dòng thác trắng xóa Nachi hùng vĩ.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 4 · Thác Nachi &amp; Chùa Seiganto-ji"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">04<span class="day-kanji-num">四日</span></div>
+              <div class="day-body">
+                <h3>Thác nước linh thiêng Nachi &amp; Đền Kumano Nachi Taisha</h3>
+                <p>Bước trên con dốc đá Daimon-zaka rợp bóng thông cổ thụ. Chiêm ngưỡng Thác Nachi — ngọn thác đơn dòng đổ thẳng cao 133 mét, được người Nhật tôn sùng như một vị thần Thần đạo. Ngay cạnh là ngôi chùa 3 tầng Seiganto-ji tạo nên bức tranh phong cảnh biểu tượng tâm linh bất hủ của nước Nhật.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🐟</span><span><strong>Món nên thử:</strong> Cá ngừ tươi sống Maguro tại thị trấn cảng Katsuura gần đó.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Có dịch vụ thuê trang phục hành hương thời Heian truyền thống để chụp ảnh trên dốc đá Daimon-zaka.</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="kmn5" data-photo-title="Ngày 5 · Cảng Katsuura ➔ Trở về Osaka" data-photo-caption="Tàu Kuroshio chạy dọc bờ biển Thái Bình Dương đưa du khách về lại Osaka.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 5 · Cảng Katsuura ➔ Trở về Osaka"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">05<span class="day-kanji-num">結び</span></div>
+              <div class="day-body">
+                <h3>Tắm onsen hang đá bờ biển Katsuura ➔ Về Osaka</h3>
+                <p>Buổi sáng trải nghiệm tắm suối nước nóng lộ thiên Bōkido nằm ngay trong một hang đá tự nhiên nhìn ra sóng biển Thái Bình Dương. Đón tàu tốc hành Kuroshio chạy dọc bờ biển Wakayama tuyệt đẹp trở lại Osaka, hoàn tất chuyến hành hương thanh tẩy tâm hồn.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🍱</span><span><strong>Món nên thử:</strong> Ekiben cơm hộp cá hồi lá tre ăn trên tàu Kuroshio ngắm cảnh biển.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Đặt chỗ bên phía tay trái tàu (hướng về Osaka) để có tầm nhìn toàn cảnh biển xanh ngắt suốt chuyến đi.</span></div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- ================= LỘ TRÌNH 7: THIÊN ĐƯỜNG BIỂN OKINAWA ================= -->
+        <div class="itinerary-panel" id="panel-route-7" role="tabpanel" aria-labelledby="tab-route-7" hidden>
+          <div class="route-hero-card">
+            <div class="route-header">
+              <div class="route-title-wrap">
+                <h3>Thiên Đường Biển Nhiệt Đới &amp; Vương Quốc Ryukyu <span lang="ja">沖縄の美ら海と琉球文化</span></h3>
+                <p>Naha ➔ Lâu đài Shuri &amp; Phố Kokusai ➔ Thủy cung Churaumi ➔ Đảo ngọc Kouri &amp; Lặn ngắm san hô</p>
+              </div>
+              <div class="route-badges">
+                <span class="route-pill">🏝️ Biển ngọc bích nhiệt đới</span>
+                <span class="route-pill">👑 Di sản vương triều Ryukyu</span>
+              </div>
+            </div>
+
+            <dl class="route-meta-grid">
+              <div class="route-meta-box"><dt>Thời lượng</dt><dd>4 ngày 3 đêm</dd></div>
+              <div class="route-meta-box"><dt>Mùa lý tưởng</dt><dd>Tháng 4 đến tháng 10 (mùa tắm biển, lặn ngắm san hô)</dd></div>
+              <div class="route-meta-box"><dt>Di chuyển chính</dt><dd>Thuê xe ô tô tự lái (Rent-a-car) hoặc Xe buýt du lịch Hop-on</dd></div>
+              <div class="route-meta-box"><dt>Ngân sách ước tính</dt><dd>25 - 36 triệu VNĐ / người</dd></div>
+            </dl>
+
+            <div class="route-highlights-box">
+              <h4>Điểm nhấn không thể bỏ lỡ</h4>
+              <ul>
+                <li>Chiêm ngưỡng cá mập voi khổng lồ và cá đuối manta bơi lội trong bể kính Kuroshio tại Thủy cung Churaumi</li>
+                <li>Lái xe qua cây cầu Kouri Ohashi băng qua đại dương biển ngọc bích tuyệt đẹp</li>
+                <li>Khám phá kiến trúc độc đáo của Vương triều cổ Ryukyu và thưởng thức tiếng đàn tam tuyến Sanshin</li>
+                <li>Lặn ống thở (snorkeling) ngắm các rạn san hô nguyên sơ và bơi cùng rùa biển hoang dã</li>
+              </ul>
+            </div>
           </div>
-        </li>
-      </ol>
+
+          <ol class="timeline">
+            <li class="day" data-photo="oki1" data-photo-title="Ngày 1 · Naha — Phố quốc tế &amp; Lâu đài Shuri" data-photo-caption="Bờ biển trong vắt như gương với rạn san hô đặc trưng của quần đảo Okinawa.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 1 · Naha — Phố quốc tế &amp; Lâu đài Shuri"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">01<span class="day-kanji-num">初日</span></div>
+              <div class="day-body">
+                <h3>Thủ phủ Naha — Di sản thành Shuri &amp; Nhịp sống phố Kokusai-dori</h3>
+                <p>Hạ cánh sân bay Naha, nhận xe tự lái hoặc đi tàu một ray Yui Rail. Thăm di tích Lâu đài Shuri (Shurijo) của Vương quốc Ryukyu xưa với kiến trúc hòa trộn giữa Nhật Bản và Trung Hoa. Chiều tối dạo phố đêm Kokusai-dori nhộn nhịp, nghe nhạc cụ dân gian đàn Sanshin rộn rã tại các quán rượu dân ca Izakaya.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🍜</span><span><strong>Món nên thử:</strong> Mì Okinawa Soba sợi to với sườn heo hầm mềm rục Rafute và mướp đắng xào trứng Goya Champuru.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Lái xe ở Nhật Bản đi bên làn đường bên trái, cần chuẩn bị Bằng lái xe Quốc tế (IDP 1949).</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="oki2" data-photo-title="Ngày 2 · Thủy cung Churaumi &amp; Mũi Manzamo" data-photo-caption="Khung cảnh mũi đất đá vôi Manzamo hình vòi voi hướng ra đại dương mênh mông.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 2 · Thủy cung Churaumi &amp; Mũi Manzamo"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">02<span class="day-kanji-num">二日</span></div>
+              <div class="day-body">
+                <h3>Thủy cung khổng lồ Okinawa Churaumi &amp; Vách đá Manzamo</h3>
+                <p>Lái xe lên phía bắc. Dừng chân ngắm vách đá vôi hình vòi voi Manzamo nổi tiếng. Đến công viên Hải dương Ocean Expo Park và Thủy cung Okinawa Churaumi — đứng sững sờ trước bể kính Kuroshio Sea khổng lồ nơi những chú cá mập voi dài 8m lượn lờ thanh thản cùng đàn cá đuối.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🥩</span><span><strong>Món nên thử:</strong> Bò bít tết Motobu Wagyu thơm mềm &amp; kem muối biển Blue Seal vị khoai tím Beni-imo.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Canh giờ cho cá mập voi ăn lúc 15h00 và 17h00 để chứng kiến cảnh chúng dựng đứng thẳng đứng ngoạn mục nuốt thức ăn.</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="oki3" data-photo-title="Ngày 3 · Đảo Kouri &amp; Lặn ngắm rạn san hô" data-photo-caption="Cây cầu vượt biển Kouri Ohashi nối liền đảo chính và đảo ngọc Kouri xanh ngắt.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 3 · Đảo Kouri &amp; Lặn ngắm rạn san hô"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">03<span class="day-kanji-num">三日</span></div>
+              <div class="day-body">
+                <h3>Cầu vượt biển Kouri Ohashi &amp; Lặn biển Blue Cave</h3>
+                <p>Trải nghiệm cảm giác lái xe trên cây cầu vượt biển dài 2km Kouri Ohashi với mặt biển xanh ngọc bích hai bên đường. Ghé mỏm đá Trái Tim Heart Rock lãng mạn. Chiều tham gia tour lặn ngắm hang động xanh Blue Cave tại mũi Maeda — ánh sáng phản chiếu dưới đáy biển sâu biến làn nước thành màu xanh phát quang huyền bí.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🍤</span><span><strong>Món nên thử:</strong> Tôm sốt bơ tỏi Garlic Shrimp lừng danh tại xe ẩm thực đảo Kouri &amp; rong nho biển Umibudo giòn rụm.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Blue Cave rất đông vào cuối tuần, nên đặt tour vào sáng sớm để có trải nghiệm lặn biển riêng tư nhất.</span></div>
+                </div>
+              </div>
+            </li>
+
+            <li class="day" data-photo="oki4" data-photo-title="Ngày 4 · Làng gốm Tsuboya ➔ Về nước" data-photo-caption="Những con ngõ nhỏ thanh bình của làng gốm cổ Tsuboya tại Naha.">
+              <button class="card-photo" type="button" data-photo-open aria-label="Xem ảnh thực tế: Ngày 4 · Làng gốm Tsuboya ➔ Về nước"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="13.6" r="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8.6 7l1.3-2.1h4.2L15.4 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></button>
+              <div class="day-badge" aria-hidden="true">04<span class="day-kanji-num">結び</span></div>
+              <div class="day-body">
+                <h3>Phố gốm Tsuboya Yachimun ➔ Tạm biệt hòn đảo ngọc</h3>
+                <p>Buổi sáng thong thả dạo con đường gốm sứ 300 năm tuổi Tsuboya Yachimun Dori với các bậc thềm lát đá phủ bóng râm. Tìm mua đôi tượng sư tử hộ mệnh Shisa truyền thống đem lại may mắn. Trả xe ô tô tại sân bay Naha và đón chuyến bay kết thúc hành trình rực rỡ nắng vàng biển xanh.</p>
+                <div class="day-extra-info">
+                  <div class="day-food"><span class="day-extra-icon">🥧</span><span><strong>Món nên thử:</strong> Bánh tart khoai lang tím Beni-imo Tart nổi tiếng mua làm quà biếu người thân.</span></div>
+                  <div class="day-tip"><span class="day-extra-icon">💡</span><span><strong>Mẹo:</strong> Tượng sư tử Shisa thường đi theo cặp: con mở miệng để đón may mắn tài lộc, con ngậm miệng để giữ gìn bình an cho gia đình.</span></div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
 
       <p class="itinerary-note reveal" style="--i:7">
-        <strong>Gợi ý mở rộng:</strong> nếu có thêm thời gian, hãy đổi 2 ngày ở Tokyo lấy
-        Hokkaido mùa tuyết hoặc Okinawa mùa biển — Nhật Bản rất khác nhau giữa hai đầu quần đảo.
+        <strong>Lời khuyên khi lên kế hoạch:</strong> Nước Nhật trải dài với hệ thống tàu Shinkansen và các chuyến bay nội địa cực kỳ thuận tiện. Nếu đi lần đầu, hãy chọn <em>Cung Đường Vàng (7 ngày)</em>; nếu yêu thiên nhiên hoang sơ và tuyết trắng hãy đến <em>Hokkaido</em>; còn nếu muốn đắm mình vào không gian cổ tích thời xưa, <em>Shirakawa-go</em> và <em>Kumano Kodo</em> sẽ để lại những kỷ niệm không thể nào quên.
       </p>
     </div>
   </section>
@@ -915,7 +1805,7 @@
       <ul>
         <li><a href="#tong-quan">Tổng quan</a></li>
         <li><a href="#vung-mien">Vùng miền &amp; điểm đến</a></li>
-        <li><a href="#van-hoa">Văn hóa truyền thống</a></li>
+        <li><a href="#van-hoa">Văn hóa &amp; Tinh hoa</a></li>
         <li><a href="#am-thuc">Ẩm thực</a></li>
       </ul>
     </nav>
@@ -925,7 +1815,7 @@
       <ul>
         <li><a href="#bon-mua">Bốn mùa</a></li>
         <li><a href="#kinh-nghiem">Kinh nghiệm du lịch</a></li>
-        <li><a href="#lich-trinh">Lịch trình 7 ngày</a></li>
+        <li><a href="#lich-trinh">7 Lộ trình du lịch</a></li>
         <li><a href="#hero">Về đầu trang</a></li>
       </ul>
     </nav>

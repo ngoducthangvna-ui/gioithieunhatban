@@ -9,9 +9,6 @@
   var lightbox = document.getElementById('lightbox');
   if (!lightbox) return;
 
-  var triggers = Array.prototype.slice.call(document.querySelectorAll('[data-photo]'));
-  if (!triggers.length) return;
-
   var media = document.getElementById('lightboxMedia');
   var image = document.getElementById('lightboxImage');
   var titleEl = document.getElementById('lightboxTitle');
@@ -22,7 +19,6 @@
   var closeBtn = lightbox.querySelector('.lightbox-close');
   var credits = window.JAPAN_PHOTOS || {};
   var photoBase = 'assets/img/photos/';
-  /* Bản một tệp nhúng sẵn ảnh dạng data URI trong window.JAPAN_PHOTO_DATA */
   var inlinePhotos = window.JAPAN_PHOTO_DATA || {};
 
   var active = [];
@@ -31,12 +27,23 @@
   var lastTrigger = null;
   var loadedCache = {};
 
+  function getAllTriggers() {
+    return Array.prototype.slice.call(document.querySelectorAll('[data-photo]'));
+  }
+
   function isVisible(el) {
     return !!el.getClientRects().length;
   }
 
   function photoSource(id) {
+    if (!id) return '';
     if (inlinePhotos[id]) return inlinePhotos[id];
+    if (id.indexOf('http://') === 0 || id.indexOf('https://') === 0 || id.indexOf('data:') === 0 || id.indexOf('/') === 0 || id.indexOf('assets/') === 0) {
+      return id;
+    }
+    if (credits[id] && credits[id].url) {
+      return credits[id].url;
+    }
     return photoBase + id + '.jpg';
   }
 
@@ -61,8 +68,22 @@
 
     media.classList.remove('is-loaded', 'is-error');
     image.alt = caption ? title + '. ' + caption : title;
-    image.onload = function () { media.classList.add('is-loaded'); };
-    image.onerror = function () { media.classList.add('is-error'); };
+    
+    image.onload = function () { 
+      media.classList.add('is-loaded'); 
+    };
+
+    image.onerror = function () {
+      if (credits[id] && credits[id].fallback) {
+        var fallbackSrc = photoBase + credits[id].fallback + '.jpg';
+        if (image.src !== fallbackSrc && !image.src.endsWith(fallbackSrc)) {
+          image.src = fallbackSrc;
+          return;
+        }
+      }
+      media.classList.add('is-error');
+    };
+
     image.src = src;
     if (image.complete && image.naturalWidth) media.classList.add('is-loaded');
 
@@ -92,11 +113,12 @@
     lastFocus = document.activeElement;
     lastTrigger = element;
 
-    active = triggers.filter(isVisible);
+    var allTriggers = getAllTriggers();
+    active = allTriggers.filter(isVisible);
     var index = active.indexOf(element);
     if (index === -1) {
-      active = triggers.slice();
-      index = triggers.indexOf(element);
+      active = allTriggers.slice();
+      index = active.indexOf(element);
     }
     if (index === -1) return;
 
@@ -108,7 +130,7 @@
     if (scrollbar > 0) document.body.style.paddingRight = scrollbar + 'px';
 
     render(index);
-    window.requestAnimationFrame(function () { closeBtn.focus(); });
+    window.requestAnimationFrame(function () { if (closeBtn) closeBtn.focus(); });
   }
 
   function close() {
@@ -120,8 +142,6 @@
     image.removeAttribute('src');
     current = -1;
 
-    /* Trả tiêu điểm về nơi đã mở ảnh; nếu là chuột (tiêu điểm ở body)
-       thì đưa về nút camera của thẻ vừa xem để dùng tiếp bằng bàn phím. */
     var target = lastFocus;
     if (!target || target === document.body || target === document.documentElement) {
       target = lastTrigger ? lastTrigger.querySelector('.card-photo') : null;
@@ -210,9 +230,8 @@
     }
   }, { passive: true });
 
-  /* Nếu tiêu điểm thoát khỏi hộp thoại bằng cách khác, kéo lại */
   document.addEventListener('focusin', function (event) {
     if (lightbox.hidden) return;
-    if (!lightbox.contains(event.target)) closeBtn.focus();
+    if (!lightbox.contains(event.target) && closeBtn) closeBtn.focus();
   });
 })();

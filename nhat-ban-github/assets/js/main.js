@@ -420,6 +420,189 @@
   var yearEl = $('#year');
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-  /* ---------- 12. Khởi tạo ---------- */
+  /* ---------- 12. Bộ lọc văn hóa (Culture Filter) ---------- */
+  var cultureFilterBtns = $$('.culture-filter-btn');
+  var cultureCards = $$('.culture-card');
+
+  cultureFilterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var filter = btn.getAttribute('data-culture-filter') || 'all';
+
+      cultureFilterBtns.forEach(function (b) {
+        var active = b === btn;
+        b.classList.toggle('is-active', active);
+        b.setAttribute('aria-pressed', String(active));
+      });
+
+      cultureCards.forEach(function (card) {
+        var cat = card.getAttribute('data-category') || 'zen';
+        var match = filter === 'all' || cat.indexOf(filter) !== -1;
+        card.classList.toggle('is-filtered-out', !match);
+      });
+    });
+  });
+
+  /* ---------- 13. Bộ chuyển đổi Lộ trình du lịch (Itinerary Selector) ---------- */
+  var itineraryTabs = $$('.itinerary-tab');
+  var itineraryPanels = $$('.itinerary-panel');
+
+  function switchItinerary(index) {
+    itineraryTabs.forEach(function (tab, i) {
+      var active = i === index;
+      tab.classList.toggle('is-active', active);
+      tab.setAttribute('aria-selected', String(active));
+      tab.setAttribute('tabindex', active ? '0' : '-1');
+    });
+
+    itineraryPanels.forEach(function (panel, i) {
+      var active = i === index;
+      panel.classList.toggle('is-active', active);
+      if (active) panel.removeAttribute('hidden');
+      else panel.setAttribute('hidden', '');
+    });
+  }
+
+  itineraryTabs.forEach(function (tab, index) {
+    tab.addEventListener('click', function () {
+      switchItinerary(index);
+    });
+
+    tab.addEventListener('keydown', function (e) {
+      var last = itineraryTabs.length - 1;
+      var next = null;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') next = index === last ? 0 : index + 1;
+      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') next = index === 0 ? last : index - 1;
+      else if (e.key === 'Home') next = 0;
+      else if (e.key === 'End') next = last;
+
+      if (next !== null) {
+        e.preventDefault();
+        switchItinerary(next);
+        itineraryTabs[next].focus();
+      }
+    });
+  });
+
+  /* ---------- 14. Âm hưởng Zen & Chuông gió Furin (Web Audio API) ---------- */
+  var audioCtx = null;
+  var isAudioPlaying = false;
+  var audioTimer = null;
+  var zenBtn = $('#zenAudioBtn');
+
+  function initAudio() {
+    if (!audioCtx) {
+      var AudioContext = window.AudioContext || window.webkitAudioContext;
+      if (AudioContext) audioCtx = new AudioContext();
+    }
+    if (audioCtx && audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+  }
+
+  // Âm Furin (chuông gió Nhật) theo ngũ cung truyền thống
+  var furinFreqs = [1174.66, 1318.51, 1567.98, 1760.00, 2093.00, 2349.32]; // D6, E6, G6, A6, C7, D7
+  
+  function playFurinChime() {
+    if (!audioCtx || !isAudioPlaying) return;
+    var baseFreq = furinFreqs[Math.floor(Math.random() * furinFreqs.length)];
+    var now = audioCtx.currentTime;
+
+    var freqs = [baseFreq, baseFreq * 2.01, baseFreq * 3.02];
+    var gains = [0.12, 0.04, 0.015];
+
+    freqs.forEach(function (f, idx) {
+      var osc = audioCtx.createOscillator();
+      var gainNode = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(f, now);
+
+      gainNode.gain.setValueAtTime(0, now);
+      gainNode.gain.linearRampToValueAtTime(gains[idx], now + 0.005);
+      gainNode.gain.exponentialRampToValueAtTime(0.0001, now + 1.8 + Math.random() * 0.8);
+
+      osc.connect(gainNode);
+      gainNode.connect(audioCtx.destination);
+
+      osc.start(now);
+      osc.stop(now + 2.8);
+    });
+
+    if (Math.random() > 0.4) {
+      setTimeout(function () {
+        if (!isAudioPlaying || !audioCtx) return;
+        var f2 = furinFreqs[Math.floor(Math.random() * furinFreqs.length)];
+        var t2 = audioCtx.currentTime;
+        var osc2 = audioCtx.createOscillator();
+        var g2 = audioCtx.createGain();
+        osc2.type = 'sine';
+        osc2.frequency.setValueAtTime(f2, t2);
+        g2.gain.setValueAtTime(0, t2);
+        g2.gain.linearRampToValueAtTime(0.08, t2 + 0.005);
+        g2.gain.exponentialRampToValueAtTime(0.0001, t2 + 1.5);
+        osc2.connect(g2);
+        g2.connect(audioCtx.destination);
+        osc2.start(t2);
+        osc2.stop(t2 + 2.0);
+      }, 180 + Math.random() * 240);
+    }
+  }
+
+  // Tiếng giọt nước Suikinkutsu trong vườn thiền
+  function playSuikinkutsu() {
+    if (!audioCtx || !isAudioPlaying) return;
+    var now = audioCtx.currentTime;
+    var f = 800 + Math.random() * 600;
+    var osc = audioCtx.createOscillator();
+    var gainNode = audioCtx.createGain();
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(f * 1.5, now);
+    osc.frequency.exponentialRampToValueAtTime(f, now + 0.08);
+
+    gainNode.gain.setValueAtTime(0, now);
+    gainNode.gain.linearRampToValueAtTime(0.06, now + 0.008);
+    gainNode.gain.exponentialRampToValueAtTime(0.0001, now + 0.4);
+
+    osc.connect(gainNode);
+    gainNode.connect(audioCtx.destination);
+    osc.start(now);
+    osc.stop(now + 0.5);
+  }
+
+  function scheduleNextSound() {
+    if (!isAudioPlaying) return;
+    var delay = 2600 + Math.random() * 3400;
+    audioTimer = setTimeout(function () {
+      if (!isAudioPlaying) return;
+      if (Math.random() < 0.7) {
+        playFurinChime();
+      } else {
+        playSuikinkutsu();
+      }
+      scheduleNextSound();
+    }, delay);
+  }
+
+  function toggleZenAudio() {
+    initAudio();
+    isAudioPlaying = !isAudioPlaying;
+    if (zenBtn) {
+      zenBtn.classList.toggle('is-active', isAudioPlaying);
+      zenBtn.setAttribute('aria-pressed', String(isAudioPlaying));
+      var label = zenBtn.querySelector('.zen-label');
+      if (label) label.textContent = isAudioPlaying ? 'Âm thanh: Đang mở 🎐' : 'Âm hưởng Zen 🎐';
+    }
+    if (isAudioPlaying) {
+      playFurinChime();
+      scheduleNextSound();
+    } else {
+      if (audioTimer) clearTimeout(audioTimer);
+    }
+  }
+
+  if (zenBtn) {
+    zenBtn.addEventListener('click', toggleZenAudio);
+  }
+
+  /* ---------- 15. Khởi tạo ---------- */
   onScrollFrame();
 })();
